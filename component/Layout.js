@@ -3,6 +3,9 @@ import { Button, Grid, Icon, Image, Input, Menu, Sidebar } from 'semantic-ui-rea
 import styled from 'styled-components';
 import Link from 'next/link';
 
+const GridWrapper = styled(Grid)`
+  border: gray;
+`;
 const ImageWrapper = styled.div`
   @media all and (max-width:1250px) {
     display: none;
@@ -42,17 +45,16 @@ function Layout({ children }) {
   const [visible, setVisible] = useState(false);
 
   return (
-    <Grid divided>
+
+    <Grid>
       <Grid.Row>
-        <Grid.Column width={3}>
-          <Image src="https://react.semantic-ui.com//images/wireframe/media-paragraph.png" />
-        </Grid.Column>
+        <Grid.Column width={3} />
         <Grid.Column width={10}>
           <Menu secondary>
             <Menu.Menu position="left">
               <Menu.Item>
                 <MenuWrapper onClick={() => setVisible((prev) => !prev)}>
-                  <Icon circular inverted color="violet" name="align justify" size="large" />
+                  <Icon link circular inverted color="violet" name="align justify" size="large" />
                   <span>Menu</span>
                 </MenuWrapper>
               </Menu.Item>
@@ -78,15 +80,10 @@ function Layout({ children }) {
             </Menu.Menu>
           </Menu>
         </Grid.Column>
-        <Grid.Column width={3}>
-          <Image src="https://react.semantic-ui.com//images/wireframe/media-paragraph.png" />
-        </Grid.Column>
+        <Grid.Column width={3} />
       </Grid.Row>
-      <Grid.Row>
-
-        <Grid.Column width={3}>
-          <Image src="https://react.semantic-ui.com//images/wireframe/media-paragraph.png" />
-        </Grid.Column>
+      <Grid.Row divided>
+        <Grid.Column width={3} />
         <Grid.Column width={10}>
           <Sidebar.Pushable>
             <Sidebar
@@ -99,7 +96,7 @@ function Layout({ children }) {
               visible={visible}
               width="thin"
             >
-              <Menu.Item as="a">
+              <Menu.Item color="violet" as="a">
                 <Icon name="home" />
                 Home
               </Menu.Item>
@@ -114,16 +111,15 @@ function Layout({ children }) {
 
             </Sidebar>
 
-            <Sidebar.Pusher>
+            <Sidebar.Pusher dimmed={visible}>
               {children}
             </Sidebar.Pusher>
           </Sidebar.Pushable>
         </Grid.Column>
-        <Grid.Column width={3}>
-          <Image src="https://react.semantic-ui.com//images/wireframe/media-paragraph.png" />
-        </Grid.Column>
+        <Grid.Column width={3} />
       </Grid.Row>
     </Grid>
+
   );
 }
 
