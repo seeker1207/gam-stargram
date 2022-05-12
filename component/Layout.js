@@ -3,9 +3,6 @@ import { Button, Grid, Icon, Image, Input, Menu, Sidebar } from 'semantic-ui-rea
 import styled from 'styled-components';
 import Link from 'next/link';
 
-const GridWrapper = styled(Grid)`
-  border: gray;
-`;
 const ImageWrapper = styled.div`
   @media all and (max-width:1250px) {
     display: none;
