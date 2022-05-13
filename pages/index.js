@@ -7,7 +7,7 @@ import Layout from '../component/Layout';
 import PhotoZone from '../component/PhotoZone';
 
 const HeaderWrapper = styled.div`
-  margin-top: 5%;
+  margin-top: 17%;
   animation-duration: 2s;
   animation-name: showheader;
   
@@ -15,28 +15,11 @@ const HeaderWrapper = styled.div`
   @keyframes showheader {
     from {
       opacity: 0;
-      margin-top: 10%
+      margin-top: 22%
     }
     to {
       opacity: 1;
-      margin-top: 5%;
-    }
-  }
-`;
-
-const ImageGridWrapper = styled.div`
-  margin-top: 5%;
-  animation-duration: 2s;
-  animation-name: showheader;
-  
-  @keyframes showheader {
-    from {
-      opacity: 0;
-      margin-top: 10%
-    }
-    to {
-      opacity: 1;
-      margin-top: 5%;
+      margin-top: 17%;
     }
   }
 `;
@@ -68,37 +51,27 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <Layout>
-        {!startBtnClicked
-          ? (
-            <HeaderWrapper>
-              <Header as="h1" icon textAlign="center">
-                <Header.Content>당신의 게임 업적🥇, </Header.Content>
-              </Header>
-              <Header as="h1" icon textAlign="center">
-                <Header.Content>동료들에게 자랑 해보세요. </Header.Content>
-              </Header>
-              <Header textAlign="center">
-                <Link href="/photo/main" passHref>
-                  <Header.Content>
-                    <StartTextWrapper>
-                      <h2>시작하기 </h2>
-                    </StartTextWrapper>
-                    <IconWrapper>
-                      <Icon link name="gamepad" size="massive" color="violet" />
-                    </IconWrapper>
-                  </Header.Content>
-                </Link>
-              </Header>
-            </HeaderWrapper>
-          )
-          : (
-            <ImageGridWrapper startBtnClicked={startBtnClicked}>
-              <PhotoZone
-                col={3}
-                imgList={Array(15).fill(null).map(() => 'https://react.semantic-ui.com/images/wireframe/image.png')}
-              />
-            </ImageGridWrapper>
-          )}
+        <HeaderWrapper>
+          <Header as="h1" icon textAlign="center">
+            <Header.Content>당신의 게임 업적🥇, </Header.Content>
+          </Header>
+          <Header as="h1" icon textAlign="center">
+            <Header.Content>동료들에게 자랑 해보세요. </Header.Content>
+          </Header>
+          <Header textAlign="center">
+            <Link href="/photo/main" passHref>
+              <Header.Content>
+                <StartTextWrapper>
+                  <h2>시작하기 </h2>
+                </StartTextWrapper>
+                <IconWrapper>
+                  <Icon link name="gamepad" size="massive" color="violet" />
+                </IconWrapper>
+              </Header.Content>
+            </Link>
+          </Header>
+        </HeaderWrapper>
+
       </Layout>
     </>
   );
