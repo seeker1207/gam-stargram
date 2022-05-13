@@ -6,13 +6,13 @@ import Link from 'next/link';
 import Layout from '../component/Layout';
 import PhotoZone from '../component/PhotoZone';
 
-const HeaderWrapper = styled.div`
+const MainHeaderWrapper = styled.div`
   margin-top: 17%;
   animation-duration: 2s;
-  animation-name: showheader;
+  animation-name: showMainheader;
   
   
-  @keyframes showheader {
+  @keyframes showMainheader {
     from {
       opacity: 0;
       margin-top: 22%
@@ -51,7 +51,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <Layout>
-        <HeaderWrapper>
+        <MainHeaderWrapper>
           <Header as="h1" icon textAlign="center">
             <Header.Content>당신의 게임 업적🥇, </Header.Content>
           </Header>
@@ -70,7 +70,7 @@ export default function Home() {
               </Header.Content>
             </Link>
           </Header>
-        </HeaderWrapper>
+        </MainHeaderWrapper>
 
       </Layout>
     </>

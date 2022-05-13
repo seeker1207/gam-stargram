@@ -25,9 +25,9 @@ const HeaderWrapper = styled.div`
 const ImageGridWrapper = styled.div`
   margin-top: 13%;
   animation-duration: 2s;
-  animation-name: showheader;
+  animation-name: showImage;
   
-  @keyframes showheader {
+  @keyframes showImage {
     from {
       opacity: 0;
       margin-top: 18%
