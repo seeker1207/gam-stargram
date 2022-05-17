@@ -22,5 +22,10 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "12.1.6"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "dependenciesMeta": {
+    "@next/swc-win32-x64-msvc": {
+      "unplugged": false
+    }
+  }
 }

@@ -504,7 +504,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],\
       ["@next/swc-win32-x64-msvc", [\
         ["npm:12.1.6", {\
-          "packageLocation": "./.yarn/unplugged/@next-swc-win32-x64-msvc-npm-12.1.6-c23d523f92/node_modules/@next/swc-win32-x64-msvc/",\
+          "packageLocation": "./.yarn/cache/@next-swc-win32-x64-msvc-npm-12.1.6-c23d523f92-8.zip/node_modules/@next/swc-win32-x64-msvc/",\
           "packageDependencies": [\
             ["@next/swc-win32-x64-msvc", "npm:12.1.6"]\
           ],\

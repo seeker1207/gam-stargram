@@ -1422,6 +1422,9 @@ __metadata:
     semantic-ui-css: ^2.4.1
     semantic-ui-react: ^2.1.2
     styled-components: ^5.3.5
+  dependenciesMeta:
+    "@next/swc-win32-x64-msvc":
+      unplugged: false
   languageName: unknown
   linkType: soft
 
