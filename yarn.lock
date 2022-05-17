@@ -379,6 +379,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-win32-x64-msvc@npm:^11.1.2":
+  version: 11.1.4
+  resolution: "@next/swc-win32-x64-msvc@npm:11.1.4"
+  checksum: 4add6e74dc02ce7738bcf1f7c45b9b9da79bec93629b384b5ddabc45e5f000b85620244840a3d0ac7ccada82b7ce583982ef96a92fc664d0d8572507b705b0ed
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1412,6 +1420,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gamstar-front@workspace:."
   dependencies:
+    "@next/swc-win32-x64-msvc": ^11.1.2
     eslint: 8.15.0
     eslint-config-airbnb: ^19.0.4
     eslint-config-next: 12.1.6

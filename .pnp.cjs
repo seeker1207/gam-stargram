@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@next/swc-win32-x64-msvc", "npm:11.1.4"],\
             ["eslint", "npm:8.15.0"],\
             ["eslint-config-airbnb", "virtual:16dc50d7b114fd349462be351809853a4c20d4dc9db913390007b581669431eda72b0721e09ebc471c0d95d6754e2d9c3cd72bb6d255a7371f2714e414651a19#npm:19.0.4"],\
             ["eslint-config-next", "virtual:16dc50d7b114fd349462be351809853a4c20d4dc9db913390007b581669431eda72b0721e09ebc471c0d95d6754e2d9c3cd72bb6d255a7371f2714e414651a19#npm:12.1.6"],\
@@ -503,6 +504,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@next/swc-win32-x64-msvc", [\
+        ["npm:11.1.4", {\
+          "packageLocation": "./.yarn/unplugged/@next-swc-win32-x64-msvc-npm-11.1.4-d788381bc9/node_modules/@next/swc-win32-x64-msvc/",\
+          "packageDependencies": [\
+            ["@next/swc-win32-x64-msvc", "npm:11.1.4"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:12.1.6", {\
           "packageLocation": "./.yarn/unplugged/@next-swc-win32-x64-msvc-npm-12.1.6-c23d523f92/node_modules/@next/swc-win32-x64-msvc/",\
           "packageDependencies": [\
@@ -1910,6 +1918,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["gamstar-front", "workspace:."],\
+            ["@next/swc-win32-x64-msvc", "npm:11.1.4"],\
             ["eslint", "npm:8.15.0"],\
             ["eslint-config-airbnb", "virtual:16dc50d7b114fd349462be351809853a4c20d4dc9db913390007b581669431eda72b0721e09ebc471c0d95d6754e2d9c3cd72bb6d255a7371f2714e414651a19#npm:19.0.4"],\
             ["eslint-config-next", "virtual:16dc50d7b114fd349462be351809853a4c20d4dc9db913390007b581669431eda72b0721e09ebc471c0d95d6754e2d9c3cd72bb6d255a7371f2714e414651a19#npm:12.1.6"],\
