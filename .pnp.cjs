@@ -33,7 +33,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@next/swc-win32-x64-msvc", "npm:11.1.4"],\
             ["eslint", "npm:8.15.0"],\
             ["eslint-config-airbnb", "virtual:16dc50d7b114fd349462be351809853a4c20d4dc9db913390007b581669431eda72b0721e09ebc471c0d95d6754e2d9c3cd72bb6d255a7371f2714e414651a19#npm:19.0.4"],\
             ["eslint-config-next", "virtual:16dc50d7b114fd349462be351809853a4c20d4dc9db913390007b581669431eda72b0721e09ebc471c0d95d6754e2d9c3cd72bb6d255a7371f2714e414651a19#npm:12.1.6"],\
@@ -504,13 +503,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@next/swc-win32-x64-msvc", [\
-        ["npm:11.1.4", {\
-          "packageLocation": "./.yarn/unplugged/@next-swc-win32-x64-msvc-npm-11.1.4-d788381bc9/node_modules/@next/swc-win32-x64-msvc/",\
-          "packageDependencies": [\
-            ["@next/swc-win32-x64-msvc", "npm:11.1.4"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:12.1.6", {\
           "packageLocation": "./.yarn/unplugged/@next-swc-win32-x64-msvc-npm-12.1.6-c23d523f92/node_modules/@next/swc-win32-x64-msvc/",\
           "packageDependencies": [\
@@ -1050,7 +1042,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],\
       ["core-js-pure", [\
         ["npm:3.22.4", {\
-          "packageLocation": "./.yarn/unplugged/core-js-pure-npm-3.22.4-6cd8a30e27/node_modules/core-js-pure/",\
+          "packageLocation": "./.yarn/cache/core-js-pure-npm-3.22.4-6cd8a30e27-5499aaf7b9.zip/node_modules/core-js-pure/",\
           "packageDependencies": [\
             ["core-js-pure", "npm:3.22.4"]\
           ],\
@@ -1918,7 +1910,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["gamstar-front", "workspace:."],\
-            ["@next/swc-win32-x64-msvc", "npm:11.1.4"],\
             ["eslint", "npm:8.15.0"],\
             ["eslint-config-airbnb", "virtual:16dc50d7b114fd349462be351809853a4c20d4dc9db913390007b581669431eda72b0721e09ebc471c0d95d6754e2d9c3cd72bb6d255a7371f2714e414651a19#npm:19.0.4"],\
             ["eslint-config-next", "virtual:16dc50d7b114fd349462be351809853a4c20d4dc9db913390007b581669431eda72b0721e09ebc471c0d95d6754e2d9c3cd72bb6d255a7371f2714e414651a19#npm:12.1.6"],\
@@ -3299,14 +3290,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],\
       ["styled-components", [\
         ["npm:5.3.5", {\
-          "packageLocation": "./.yarn/unplugged/styled-components-virtual-117c160106/node_modules/styled-components/",\
+          "packageLocation": "./.yarn/cache/styled-components-npm-5.3.5-88e3937b59-05a664dfe4.zip/node_modules/styled-components/",\
           "packageDependencies": [\
             ["styled-components", "npm:5.3.5"]\
           ],\
           "linkType": "SOFT"\
         }],\
         ["virtual:16dc50d7b114fd349462be351809853a4c20d4dc9db913390007b581669431eda72b0721e09ebc471c0d95d6754e2d9c3cd72bb6d255a7371f2714e414651a19#npm:5.3.5", {\
-          "packageLocation": "./.yarn/unplugged/styled-components-virtual-117c160106/node_modules/styled-components/",\
+          "packageLocation": "./.yarn/__virtual__/styled-components-virtual-117c160106/0/cache/styled-components-npm-5.3.5-88e3937b59-05a664dfe4.zip/node_modules/styled-components/",\
           "packageDependencies": [\
             ["styled-components", "virtual:16dc50d7b114fd349462be351809853a4c20d4dc9db913390007b581669431eda72b0721e09ebc471c0d95d6754e2d9c3cd72bb6d255a7371f2714e414651a19#npm:5.3.5"],\
             ["@babel/helper-module-imports", "npm:7.16.7"],\
