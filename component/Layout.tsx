@@ -68,7 +68,7 @@ export default function Layout({ children } : {children : ReactElement}) {
                   <ImageWrapper>
                     <Menu.Item>
                       <Link href="/" passHref>
-                        <Image src="/gam_logo.PNG" size="small" />
+                        <Image src="/gamstar_logo.PNG" size="small" />
                       </Link>
                     </Menu.Item>
                   </ImageWrapper>

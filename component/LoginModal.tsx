@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal, Image, Header, Button } from 'semantic-ui-react';
 
 function LoginModal(props) {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   return (
     <Modal
