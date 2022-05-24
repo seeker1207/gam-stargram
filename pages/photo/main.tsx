@@ -69,8 +69,8 @@ function Main() {
             imgList={Array(15).fill(null).map(() => 'https://react.semantic-ui.com/images/wireframe/image.png')}
           />
         </ImageGridWrapper>
+
       </div>
-      <LoginModal />
     </Layout>
   );
 }

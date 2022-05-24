@@ -1,9 +1,9 @@
 import React from 'react';
-import {Grid, Image, SemanticWIDTHS} from 'semantic-ui-react';
+import {Grid, Image, SemanticWIDTHSNUMBER} from 'semantic-ui-react';
 import {v4 as uuid} from 'uuid';
 
 interface Props {
-  col: number;
+  col: SemanticWIDTHSNUMBER;
   row: number;
   imgList: Array<String>;
 }

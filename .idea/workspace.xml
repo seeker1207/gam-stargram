@@ -1,98 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="Changes">
+    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
+      <change afterPath="$PROJECT_DIR$/../gam-stargram-back/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gam-stargram-back/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pnp.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.pnp.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@ant-design-colors-npm-6.0.0-8629027ebe-55110ac8a3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@ant-design-icons-npm-4.7.0-8ad06c46c5-4264d38e6b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@ant-design-icons-svg-npm-4.2.1-c7038236c5-c1fa1bbeb0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@ant-design-react-slick-npm-0.28.4-abce7ed65e-8b8b076adb.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@ctrl-tinycolor-npm-3.4.1-13c90f3b7f-4c96bd5b64.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-jquery-npm-3.5.14-5fafe75fbb-159d6f804e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-react-npm-18.0.9-4dccadcd56-162364dad7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-accordion-npm-2.2.2-d8a3c0a71b-954253f9da.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-api-npm-2.2.4-bc96ba2110-ca5c6ba645.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-checkbox-npm-2.2.2-59adb20fee-f38b6f1b92.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-dimmer-npm-2.2.2-e310c942aa-1af33a2ed1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-dropdown-npm-2.2.3-e0fbe72e7a-f17aa72896.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-embed-npm-2.2.2-9b9853b98a-e66b913463.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-form-npm-2.2.6-ef4cbbf52e-33c2c1d8ef.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-modal-npm-2.2.3-acf55d9c7b-07c2e71bad.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-nag-npm-2.2.2-575eec0d53-c721174f48.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-npm-2.2.7-e2c9a899de-d5fc805f57.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-popup-npm-2.2.3-c82b464539-7a64c783ce.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-progress-npm-2.2.3-97fd012aff-f48db6b110.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-rating-npm-2.2.2-4fc1b4ca5a-cb20a05d04.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-search-npm-2.2.3-d9c0f382b6-5966faac1d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-shape-npm-2.2.2-c173805972-baac85187a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-sidebar-npm-2.2.2-09064ffd28-b0116942de.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-site-npm-2.2.2-04daa0c4f6-5dfabfa972.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-sticky-npm-2.2.3-c0267817cc-5e3ba87b1a.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-tab-npm-2.2.2-3202e842ed-ebe0f73bea.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-transition-npm-2.2.2-665090f568-cf1551ccc9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-semantic-ui-visibility-npm-2.2.3-48cd212e0a-e489276a1e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/@types-sizzle-npm-2.3.3-9403924950-586a9fb1f6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/antd-npm-4.20.5-fb288077c5-974e6f3ce1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/array-tree-filter-npm-2.1.0-54ba89ca90-ca65dbeb80.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/async-validator-npm-4.1.1-470b8d5b59-88590ab8ad.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/classnames-npm-2.3.1-f2ae0a8d3c-14db8889d5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/compute-scroll-into-view-npm-1.0.17-708f0ecc3d-b20c05a10c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/copy-to-clipboard-npm-3.3.1-18029bce99-3c7b1c333d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/date-fns-npm-2.28.0-c19c5add1b-a0516b2e4f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/dayjs-npm-1.11.2-644b12fe04-78f8bd04a9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/dom-align-npm-1.12.3-120bce476f-5d67a20e77.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/json2mq-npm-0.2.0-aa8a6516b9-5672c3abdd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/memoize-one-npm-6.0.0-8b2a2cd020-f185ea69f7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/moment-npm-2.29.3-fe4ba99bae-2e780e36d9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-align-npm-4.0.12-08f6955dda-1efb522c61.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-cascader-npm-3.5.0-82b641f71d-458df17782.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-checkbox-npm-2.3.2-294a86eac7-023e479d2f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-collapse-npm-3.1.4-7349966853-df7bb7cbe5.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-dialog-npm-8.8.1-505f7ab316-de4214021b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-drawer-npm-4.4.3-c465a00ec5-bb0b3932db.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-dropdown-npm-3.5.2-4822ef27ce-c83fb3b5b8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-field-form-npm-1.26.4-e24f8f777b-b62b59c990.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-image-npm-5.6.2-0fb6d87893-ab831cd9a3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-input-npm-0.0.1-alpha.7-fb9f689baf-5661c7482f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-input-number-npm-7.3.4-afb2d509de-18cef039a8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-mentions-npm-1.7.1-4a479c6abd-f6ee2705d8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-menu-npm-9.5.5-f387f5a073-168fda92f7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-motion-npm-2.6.0-83003bacbf-cb0d5f1686.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-notification-npm-4.6.0-fa8a8c3fab-c66d4ae1d8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-overflow-npm-1.2.6-8f4be1ceba-b0c933ff94.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-pagination-npm-3.1.16-df90267990-0ed7783731.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-picker-npm-2.6.9-ecb9c38250-881b98d822.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-progress-npm-3.2.4-4871a5cefc-9efc3c3296.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-rate-npm-2.9.2-b263a33d70-5a7528e4b4.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-resize-observer-npm-1.2.0-3db896f403-cb338ee405.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-segmented-npm-2.1.0-e31a9fd697-4f61ba5da9.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-select-npm-14.1.3-97d87bb066-49b2b9e7fd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-slider-npm-10.0.0-9ca452ac78-33c7839280.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-steps-npm-4.1.4-0aa60b267f-e10bfd18b3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-switch-npm-3.2.2-2c3abdce1a-c0242385fa.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-table-npm-7.24.2-2a2302b9db-a9402da364.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-tabs-npm-11.13.0-33edab72b4-382c63e698.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-textarea-npm-0.3.7-3aec37ea00-1a588f2b2b.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-tooltip-npm-5.1.1-fbe838c578-e65b175c28.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-tree-npm-5.5.0-b95dcacfbc-5ea172eef6.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-tree-select-npm-5.3.0-608d9174b4-6033d1826f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-trigger-npm-5.2.18-5a85b97e0b-273e4943a8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-upload-npm-4.3.3-4fbebb7e6e-1f98553d32.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-util-npm-5.21.4-3faa92dced-306bbb7caa.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/rc-virtual-list-npm-3.4.8-2b6bc49c03-946fcd43da.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/resize-observer-polyfill-npm-1.5.1-603120e8a0-57e7f79489.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/scroll-into-view-if-needed-npm-2.2.29-9b25631f96-6b888404cc.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/string-convert-npm-0.2.1-f1a42cb9ea-1098b1d8e3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.yarn/cache/toggle-selection-npm-1.0.6-c506b73005-a90dc80ed1.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/component/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/Layout2.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/component/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/LoginModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/component/PhotoZone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/PhotoZone.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/antd/index2.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/photo/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/photo/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,12 +22,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../gam-stargram-back" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="296CqVXkYHeyPjj9xZ1JylyZog4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -117,8 +40,13 @@
     "WebServerToolWindowFactoryState": "false",
     "javascript.nodejs.core.library.configured.version": "16.14.2",
     "javascript.nodejs.core.library.typings.version": "16.11.36",
+    "js.last.introduce.type": "CONST",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "C:/React portfolio/gam-stargram-back",
     "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "C:\\React portfolio\\gam-stargram-back\\.yarn\\unplugged\\eslint-npm-8.15.0-8b75f2ee1a\\node_modules\\eslint",
+    "node.js.selected.package.standard": "",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "yarn",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -178,8 +106,17 @@
       <workItem from="1653008557283" duration="10000" />
       <workItem from="1653008600028" duration="10000" />
       <workItem from="1653008617004" duration="800000" />
-      <workItem from="1653009437975" duration="3102000" />
+      <workItem from="1653009437975" duration="4805000" />
+      <workItem from="1653365274271" duration="9045000" />
     </task>
+    <task id="LOCAL-00001" summary="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
+      <created>1653036824027</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653036824027</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +132,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정" />
+    <option name="LAST_COMMIT_MESSAGE" value="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

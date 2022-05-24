@@ -28,6 +28,7 @@ const IconWrapper = styled.div`
   right: 4%;
   font-size: 1.5em;
 `;
+
 const StartTextWrapper = styled.div`
   z-index: 1;
   color: white;

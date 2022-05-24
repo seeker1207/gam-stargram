@@ -2,6 +2,7 @@ import React, { ReactElement, useState } from 'react';
 import { Button, Grid, GridRow, Icon, Image, Input, Menu, Sidebar } from 'semantic-ui-react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import LoginModal from "./LoginModal";
 
 const ImageWrapper = styled.div`
   @media all and (max-width:1250px) {
@@ -81,7 +82,8 @@ export default function Layout({ children } : {children : ReactElement}) {
                   </SearchBarWrapper>
                   <LoginMenuWrapper>
                     <Menu.Item>
-                      <Button color="violet">로그인</Button>
+                      <LoginModal />
+
                     </Menu.Item>
                   </LoginMenuWrapper>
                 </Menu.Menu>
