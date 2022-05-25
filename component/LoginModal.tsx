@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Modal, Image, Header, Button, Form, Checkbox, Menu } from 'semantic-ui-react';
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const LoginButtonWrapper = styled.div`
   display: inline-block;
@@ -13,7 +13,7 @@ const FormFiledWrapper = styled.div`
   input:focus {
     border-color: #5829BBFF !important;
   }
-`
+`;
 
 function LoginModal(props) {
   const [open, setOpen] = useState(false);
@@ -27,42 +27,42 @@ function LoginModal(props) {
       onOpen={() => setOpen(true)}
       open={open}
       trigger={<Button color="violet">로그인</Button>}
-      size={"tiny"}
-      style={loginLoading && {cursor:"not-allowed"}}
+      size="tiny"
+      style={loginLoading && { cursor: 'not-allowed' }}
     >
-      <Modal.Header style={{color: "#5829bb"}}>
-        <Image src="/gamstar_logo.PNG" size="small" style={{display:"inline-block"}}/>
-        <div style={{display:"inline-block", position:"relative", top:"0.1em"}}>에 로그인</div>
+      <Modal.Header style={{ color: '#5829bb' }}>
+        <Image src="/gamstar_logo.PNG" size="small" style={{ display: 'inline-block' }} />
+        <div style={{ display: 'inline-block', position: 'relative', top: '0.1em' }}>에 로그인</div>
       </Modal.Header>
       <Modal.Content>
         <Modal.Description>
           <Menu pointing secondary color="violet">
             <Menu.Item
-                name='login'
-                active={activeItem === 'login'}
-                onClick={handleItemClick}
+              name="login"
+              active={activeItem === 'login'}
+              onClick={handleItemClick}
             >
               로그인
             </Menu.Item>
 
             <Menu.Item
-                name='signIn'
-                active={activeItem === 'signIn'}
-                onClick={handleItemClick}
+              name="signIn"
+              active={activeItem === 'signIn'}
+              onClick={handleItemClick}
             >
               회원가입
             </Menu.Item>
           </Menu>
           <Form>
             <FormFiledWrapper>
-            <Form.Field>
-              <label>아이디</label>
-              <input placeholder='ID' />
-            </Form.Field>
-            <Form.Field>
-              <label>비밀번호</label>
-              <input placeholder='Password' />
-            </Form.Field>
+              <Form.Field>
+                <label>아이디</label>
+                <input placeholder="ID" />
+              </Form.Field>
+              <Form.Field>
+                <label>비밀번호</label>
+                <input placeholder="Password" />
+              </Form.Field>
             </FormFiledWrapper>
           </Form>
         </Modal.Description>
@@ -70,14 +70,14 @@ function LoginModal(props) {
       <Modal.Actions>
         <LoginButtonWrapper>
           <Button
-              color="instagram"
-              content="로그인"
-              labelPosition="right"
-              icon="checkmark"
-              onClick={() => setLoginLoading(true)}
-              loading={loginLoading}
-              disabled={loginLoading}
-              positive
+            color="instagram"
+            content="로그인"
+            labelPosition="right"
+            icon="checkmark"
+            onClick={() => setLoginLoading(true)}
+            loading={loginLoading}
+            disabled={loginLoading}
+            positive
           />
         </LoginButtonWrapper>
         <Button color="black" onClick={() => setOpen(false)}>

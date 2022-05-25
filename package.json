@@ -35,5 +35,10 @@
   "resolutions": {
     "@types/react": "~17.0.21"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@3.2.0",
+  "dependenciesMeta": {
+    "eslint@8.15.0": {
+      "unplugged": true
+    }
+  }
 }

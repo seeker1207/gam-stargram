@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Header } from 'semantic-ui-react';
 import PhotoZone from '../../component/PhotoZone';
 import Layout from '../../component/Layout';
-import LoginModal from '../../component/LoginModal';
 
 const HeaderWrapper = styled.div`
   margin-top: 10em;
