@@ -28,7 +28,7 @@ function LoginModal(props) {
       open={open}
       trigger={<Button color="violet">로그인</Button>}
       size="tiny"
-      style={loginLoading && { cursor: 'not-allowed' }}
+      style={loginLoading ? { cursor: 'not-allowed' } : {}}
     >
       <Modal.Header style={{ color: '#5829bb' }}>
         <Image src="/gamstar_logo.PNG" size="small" style={{ display: 'inline-block' }} />
