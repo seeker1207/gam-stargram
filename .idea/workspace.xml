@@ -1,20 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
-      <change afterPath="$PROJECT_DIR$/../gam-stargram-back/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gam-stargram-back/app.js" afterDir="false" />
+    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="백엔드 yarn berry로 전환 작업">
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-core-npm-7.18.0-e955477e34-350b7724a4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-eslint-parser-npm-7.17.0-c28cb5c02e-1cedd9998d.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-generator-npm-7.18.0-f5b6ff81fc-0854b21d94.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-helper-compilation-targets-npm-7.17.10-4648377de1-5f547c7ebd.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-helper-environment-visitor-npm-7.16.7-3ee2ba2019-c03a10105d.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-helper-plugin-utils-npm-7.16.7-9e572698e0-d08dd86554.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-helper-simple-access-npm-7.17.7-3274d165af-58a9bfd054.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-helpers-npm-7.18.0-a384fbcaa1-3f41631c07.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-parser-npm-7.18.0-77a18bef7b-253b5828bf.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-plugin-syntax-jsx-npm-7.16.7-06e2646d53-cd9b0e53c5.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-plugin-transform-react-jsx-npm-7.17.3-8d36ef35ea-7e33a3fb78.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-plugin-transform-react-pure-annotations-npm-7.16.7-dd03a4d056-715fe9c5fd.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-preset-react-npm-7.16.7-a0d2daefeb-d0a052a418.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-traverse-npm-7.18.0-311f00d850-b80b49ba5c.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-types-npm-7.17.10-3d8801c555-40cfc3f43a.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@babel-types-npm-7.18.0-f0693aeded-151485f94c.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@eslint-eslintrc-npm-1.2.3-4b790850f8-48e7b7ac05.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@types-debug-npm-4.1.7-f54c81f8db-0a7b89d8ed.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@types-ms-npm-0.7.31-ea3b89342b-daadd354ae.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@types-node-npm-17.0.33-e827e447d2-6620652cc8.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/@types-validator-npm-13.7.2-a51e56b9bb-e679261dd5.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/at-least-node-npm-1.0.0-2b36e661fa-463e2f8e43.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/bluebird-npm-3.7.2-6a54136ee3-869417503c.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/caniuse-lite-npm-1.0.30001342-50542dd564-9ad47aec82.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/cli-color-npm-2.0.2-1885ece5a0-a1d8cb1112.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/commander-npm-2.20.3-d8dcbaa39b-ab8c07884e.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/config-chain-npm-1.1.13-82e06afbc4-828137a28e.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/d-npm-1.0.1-64afbbc689-49ca0639c7.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/dottie-npm-2.0.2-ef16765a8f-046a581803.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/editorconfig-npm-0.15.3-873be190a7-a94afeda19.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/electron-to-chromium-npm-1.4.137-35182e6efc-639d7b9490.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/es-abstract-npm-1.20.0-b232726f98-c9cc85a7aa.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/es5-ext-npm-0.10.61-53173b2421-2f2034e91e.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/es6-iterator-npm-2.0.3-4dadb0ccc1-6e48b1c2d9.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/es6-symbol-npm-3.1.3-34d72f2a23-cd49722c2a.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/es6-weak-map-npm-2.0.3-5e57e0b4e6-19ca15f46d.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/eslint-npm-8.15.0-8b75f2ee1a-d889639383.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/event-emitter-npm-0.3.5-f1e8b8edb5-27c1399557.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/ext-npm-1.6.0-d724ecc103-ca3ef4619e.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/fs-extra-npm-9.1.0-983c2ddb4c-ba71ba32e0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/glob-npm-7.2.0-bb4644d239-78a8ea9423.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/inflection-npm-1.13.2-85fd80437c-e7ad055938.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/is-promise-npm-2.2.2-afbf94db67-18bf7d1c59.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/js-beautify-npm-1.14.3-0e64fb2c4b-475146747d.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/jsonfile-npm-6.1.0-20a4796cee-7af3b8e1ac.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/lru-queue-npm-0.1.0-8e1c90dde8-7f2c53c5e7.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/memoizee-npm-0.4.15-69d374fc14-4065d94416.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/moment-npm-2.29.3-fe4ba99bae-2e780e36d9.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/moment-timezone-npm-0.5.34-e4fe2d01f6-12a1d3d52e.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/next-tick-npm-1.1.0-e0eb60d6a4-83b5cf3602.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/node-releases-npm-2.0.4-7d25d174cd-b32d6c2032.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/object-inspect-npm-1.12.0-d064fa559a-2b36d4001a.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/passport-npm-0.5.2-50fdd6d9c8-be17a64a06.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/pg-connection-string-npm-2.5.0-1ee5de9ab9-a6f3a068f7.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/proto-list-npm-1.2.4-a96a43df28-4d4826e171.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/retry-as-promised-npm-5.0.0-305d61b9d1-4d17e0597f.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/sequelize-cli-npm-6.4.1-bcbffd9dc1-4708f3a074.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/sequelize-npm-6.19.0-276d6c8925-e1faa389fe.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/sequelize-pool-npm-7.1.0-670df81ecb-b11d06d02d.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/sigmund-npm-1.0.1-c0417d7c57-793f81f808.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/timers-ext-npm-0.1.7-7edcefbfb5-ef3f27a070.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/toposort-class-npm-1.0.1-aefabde69e-c5e3229d48.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/type-npm-1.2.0-e67311c4b2-dae8c64f82.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/type-npm-2.6.0-bc8cf9ff15-80da01fcc0.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/umzug-npm-2.3.0-1bf28c8e30-8cc2d5e373.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/universalify-npm-2.0.0-03b8b418a8-2406a4edf4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/validator-npm-13.7.0-624277e841-2b83283de1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.yarn/cache/wkx-npm-0.5.0-fca5152cd8-47b27387de.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/dist/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/dist/config/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/dist/models/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/dist/models/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/dist/passport/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/dist/passport/local.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/dist/type/modelTypes.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../gam-stargram-back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/LoginModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/PhotoZone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/PhotoZone.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/photo/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/photo/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +92,10 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/../gam-stargram-back/package.json" />
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="296CqVXkYHeyPjj9xZ1JylyZog4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -50,7 +120,7 @@
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "yarn",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "yarn:package.json:typescript",
+    "ts.external.directory.path": "yarn:..\\gam-stargram-back\\package.json:typescript",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -107,7 +177,10 @@
       <workItem from="1653008600028" duration="10000" />
       <workItem from="1653008617004" duration="800000" />
       <workItem from="1653009437975" duration="4805000" />
-      <workItem from="1653365274271" duration="9045000" />
+      <workItem from="1653365274271" duration="9993000" />
+      <workItem from="1653611921405" duration="181000" />
+      <workItem from="1653612110903" duration="89000" />
+      <workItem from="1653612207243" duration="1443000" />
     </task>
     <task id="LOCAL-00001" summary="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
       <created>1653036824027</created>
@@ -116,11 +189,30 @@
       <option name="project" value="LOCAL" />
       <updated>1653036824027</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="로그인 모달 창 작업 구현">
+      <created>1653385853457</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653385853457</updated>
+    </task>
+    <task id="LOCAL-00003" summary="백엔드 yarn berry로 전환 작업">
+      <created>1653386012339</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653386012339</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../gam-stargram-back/app.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -135,7 +227,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정" />
+    <MESSAGE value="로그인 모달 창 작업 구현" />
+    <MESSAGE value="백엔드 yarn berry로 전환 작업" />
+    <option name="LAST_COMMIT_MESSAGE" value="백엔드 yarn berry로 전환 작업" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
