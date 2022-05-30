@@ -2,7 +2,8 @@ import React, { ReactElement, useState } from 'react';
 import { Button, Grid, GridRow, Icon, Image, Input, Menu, Sidebar } from 'semantic-ui-react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import LoginModal from "./LoginModal";
+import LoginModal from './LoginModal';
+import useUser from '../hooks/useUser';
 
 const ImageWrapper = styled.div`
   @media all and (max-width:1250px) {
@@ -51,6 +52,7 @@ const SearchBarWrapper = styled.div`
 
 export default function Layout({ children } : {children : ReactElement}) {
   const [visible, setVisible] = useState(false);
+  const { user } = useUser();
   return (
     <>
       <MenuGridWrapper>
@@ -82,6 +84,7 @@ export default function Layout({ children } : {children : ReactElement}) {
                   </SearchBarWrapper>
                   <LoginMenuWrapper>
                     <Menu.Item>
+
                       <LoginModal />
 
                     </Menu.Item>

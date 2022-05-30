@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
 axios.defaults.baseURL = 'http://localhost:3065';
 axios.defaults.withCredentials = true;
@@ -17,4 +17,9 @@ function login(userInfo: loginReqInfo): Promise<User> {
   return axios.post('http://localhost:3065/user/login', userInfo);
 }
 
-export { login };
+function getUserFetcher(id: string) {
+  return (url) => axios.get(url, { params: { id } })
+    .then((res) => res.data);
+}
+
+export { login, getUserFetcher };

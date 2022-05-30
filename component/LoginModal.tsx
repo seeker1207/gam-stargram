@@ -7,7 +7,7 @@ import useInput from '../hooks/useInput';
 const LoginButtonWrapper = styled.div`
   display: inline-block;
   .ui.button {
-    background-color: #5829bb  
+    background-color: #5829bb
   }
 `;
 
