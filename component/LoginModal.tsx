@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { Modal, Image, Header, Button, Form, Checkbox, Menu } from 'semantic-ui-react';
+import React, { useCallback, useState } from 'react';
+import { Modal, Image, Button, Form, Menu } from 'semantic-ui-react';
 import styled from 'styled-components';
+import { login } from '../api/userApi';
+import useInput from '../hooks/useInput';
 
 const LoginButtonWrapper = styled.div`
   display: inline-block;
@@ -15,11 +17,19 @@ const FormFiledWrapper = styled.div`
   }
 `;
 
-function LoginModal(props) {
+function LoginModal() {
   const [open, setOpen] = useState(false);
   const [loginLoading, setLoginLoading] = useState(false);
   const [activeItem, setActiveItem] = useState('login');
+  const [email, onChangeEmail] = useInput('');
+  const [password, onChangePassword] = useInput('');
+
   const handleItemClick = (e, { name }) => setActiveItem(name);
+
+  const onLogin = useCallback(async () => {
+    setLoginLoading(true);
+    await login({ email, password });
+  }, [email, password]);
 
   return (
     <Modal
@@ -56,12 +66,12 @@ function LoginModal(props) {
           <Form>
             <FormFiledWrapper>
               <Form.Field>
-                <label>아이디</label>
-                <input placeholder="ID" />
+                <label htmlFor="email">이메일</label>
+                <input name="email" value={email} onChange={onChangeEmail} type="email" placeholder="Email" />
               </Form.Field>
               <Form.Field>
-                <label>비밀번호</label>
-                <input placeholder="Password" />
+                <label htmlFor="password">비밀번호</label>
+                <input name="password" value={password} onChange={onChangePassword} type="password" placeholder="Password" />
               </Form.Field>
             </FormFiledWrapper>
           </Form>
@@ -74,10 +84,11 @@ function LoginModal(props) {
             content="로그인"
             labelPosition="right"
             icon="checkmark"
-            onClick={() => setLoginLoading(true)}
+            onClick={() => onLogin()}
             loading={loginLoading}
             disabled={loginLoading}
             positive
+            htmlType="submit"
           />
         </LoginButtonWrapper>
         <Button color="black" onClick={() => setOpen(false)}>

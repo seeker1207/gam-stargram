@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
-      <change afterPath="$PROJECT_DIR$/../gam-stargram-back/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gam-stargram-back/app.js" afterDir="false" />
+    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="백엔드 로그인 기능 구현">
+      <change afterPath="$PROJECT_DIR$/api/userApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.pnp.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/.pnp.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gam-stargram-back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gam-stargram-back/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pnp.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.pnp.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/component/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/LoginModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/PhotoZone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/PhotoZone.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/photo/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/photo/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,33 +25,38 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/../gam-stargram-back/package.json" />
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
   <component name="ProjectId" id="296CqVXkYHeyPjj9xZ1JylyZog4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "16.14.2",
-    "javascript.nodejs.core.library.typings.version": "16.11.36",
-    "js.last.introduce.type": "CONST",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/React portfolio/gam-stargram-back",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "C:\\React portfolio\\gam-stargram-back\\.yarn\\unplugged\\eslint-npm-8.15.0-8b75f2ee1a\\node_modules\\eslint",
-    "node.js.selected.package.standard": "",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "yarn:package.json:typescript",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.14.2&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.36&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/React portfolio/nodebird&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\React portfolio\\gam-stargram-back\\.yarn\\unplugged\\eslint-npm-8.16.0-4dc6ea62e6\\node_modules\\eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;yarn:..\\gam-stargram-back\\package.json:typescript&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="이름이 지정되지 않았습니다" type="NodeJSConfigurationType" nameIsGenerated="true" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -107,7 +110,13 @@
       <workItem from="1653008600028" duration="10000" />
       <workItem from="1653008617004" duration="800000" />
       <workItem from="1653009437975" duration="4805000" />
-      <workItem from="1653365274271" duration="9045000" />
+      <workItem from="1653365274271" duration="9993000" />
+      <workItem from="1653611921405" duration="181000" />
+      <workItem from="1653612110903" duration="89000" />
+      <workItem from="1653612207243" duration="1443000" />
+      <workItem from="1653631446968" duration="5946000" />
+      <workItem from="1653756349197" duration="1655000" />
+      <workItem from="1653813227432" duration="6063000" />
     </task>
     <task id="LOCAL-00001" summary="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
       <created>1653036824027</created>
@@ -116,11 +125,37 @@
       <option name="project" value="LOCAL" />
       <updated>1653036824027</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="로그인 모달 창 작업 구현">
+      <created>1653385853457</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653385853457</updated>
+    </task>
+    <task id="LOCAL-00003" summary="백엔드 yarn berry로 전환 작업">
+      <created>1653386012339</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653386012339</updated>
+    </task>
+    <task id="LOCAL-00004" summary="백엔드 로그인 기능 구현">
+      <created>1653636908323</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653636908323</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../gam-stargram-back/app.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -135,7 +170,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정" />
-    <option name="LAST_COMMIT_MESSAGE" value="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정" />
+    <MESSAGE value="로그인 모달 창 작업 구현" />
+    <MESSAGE value="백엔드 yarn berry로 전환 작업" />
+    <MESSAGE value="백엔드 로그인 기능 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="백엔드 로그인 기능 구현" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
