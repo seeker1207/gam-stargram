@@ -31,7 +31,10 @@ function LoginModal() {
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   const onLogin = useCallback(async () => {
-    mutate('/user/login', await login({ email, password }), false);
+    setLoginLoading(true);
+    // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    // await delay(1000);
+    await mutate('/user/login', await login({ email, password }), false);
   }, [email, password]);
 
   return (
@@ -88,8 +91,8 @@ function LoginModal() {
             labelPosition="right"
             icon="checkmark"
             onClick={() => onLogin()}
-            loading={isLoading}
-            disabled={isLoading}
+            loading={loginLoading}
+            disabled={loginLoading}
             positive
             htmlType="submit"
           />

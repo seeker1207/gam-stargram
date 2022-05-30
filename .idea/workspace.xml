@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="백엔드 로그인 기능 구현">
-      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/controller/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/controller/UserController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/tsconfig.json" afterDir="false" />
+    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="프론트 로그인 swr 구현">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/userApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/userApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/component/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/LoginModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useUser.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653636908323</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="프론트 로그인 swr 구현">
+      <created>1653910201625</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653910201625</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +173,8 @@
     <MESSAGE value="로그인 모달 창 작업 구현" />
     <MESSAGE value="백엔드 yarn berry로 전환 작업" />
     <MESSAGE value="백엔드 로그인 기능 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="백엔드 로그인 기능 구현" />
+    <MESSAGE value="프론트 로그인 swr 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="프론트 로그인 swr 구현" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
