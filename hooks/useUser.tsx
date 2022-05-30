@@ -1,14 +1,15 @@
 import useSWR from 'swr';
-import { getUserFetcher } from '../api/userApi';
+import { getLoginUserFetcher } from '../api/userApi';
 
-function useUser(id) {
-  const { data, error } = useSWR(`/user/${id}`, getUserFetcher);
+function useLoginUser() {
+  const { data, error } = useSWR('/user/login', getLoginUserFetcher);
+
   return {
     user: data,
     isLoading: !error && !data,
-    isLoggedOut: error && error.status === 403,
+    isLoggedOut: error && error.response.status === 403,
     isError: error,
   };
 }
 
-export default useUser;
+export default useLoginUser;

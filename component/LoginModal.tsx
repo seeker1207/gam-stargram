@@ -1,8 +1,10 @@
 import React, { useCallback, useState } from 'react';
+import useSWR, { useSWRConfig } from 'swr';
 import { Modal, Image, Button, Form, Menu } from 'semantic-ui-react';
 import styled from 'styled-components';
-import { login } from '../api/userApi';
+import { getUserFetcher, login } from '../api/userApi';
 import useInput from '../hooks/useInput';
+import useLoginUser from '../hooks/useUser';
 
 const LoginButtonWrapper = styled.div`
   display: inline-block;
@@ -23,12 +25,13 @@ function LoginModal() {
   const [activeItem, setActiveItem] = useState('login');
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
+  const { mutate } = useSWRConfig();
+  const { isLoading } = useLoginUser();
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   const onLogin = useCallback(async () => {
-    setLoginLoading(true);
-    await login({ email, password });
+    mutate('/user/login', await login({ email, password }), false);
   }, [email, password]);
 
   return (
@@ -85,8 +88,8 @@ function LoginModal() {
             labelPosition="right"
             icon="checkmark"
             onClick={() => onLogin()}
-            loading={loginLoading}
-            disabled={loginLoading}
+            loading={isLoading}
+            disabled={isLoading}
             positive
             htmlType="submit"
           />

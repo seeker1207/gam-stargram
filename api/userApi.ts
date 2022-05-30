@@ -1,7 +1,9 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
+import { Fetcher } from 'swr';
 
 axios.defaults.baseURL = 'http://localhost:3065';
 axios.defaults.withCredentials = true;
+axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 interface loginReqInfo {
   email: string
@@ -22,4 +24,6 @@ function getUserFetcher(id: string) {
     .then((res) => res.data);
 }
 
-export { login, getUserFetcher };
+const getLoginUserFetcher: Fetcher<User, string> = (url) => axios.get(url).then((res) => res.data);
+
+export { login, getUserFetcher, getLoginUserFetcher };

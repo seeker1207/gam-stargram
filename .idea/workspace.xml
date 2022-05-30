@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="백엔드 로그인 기능 구현">
-      <change afterPath="$PROJECT_DIR$/api/userApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/.pnp.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/.pnp.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/controller/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/controller/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pnp.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.pnp.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/userApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/userApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/component/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/LoginModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useUser.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +17,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../gam-stargram-back" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,28 +33,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.14.2&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.36&quot;,
-    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/React portfolio/nodebird&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\React portfolio\\gam-stargram-back\\.yarn\\unplugged\\eslint-npm-8.16.0-4dc6ea62e6\\node_modules\\eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;yarn:..\\gam-stargram-back\\package.json:typescript&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "16.14.2",
+    "javascript.nodejs.core.library.typings.version": "16.11.36",
+    "js.last.introduce.type": "CONST",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "C:/React portfolio/nodebird",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "C:\\React portfolio\\gam-stargram-back\\.yarn\\unplugged\\eslint-npm-8.16.0-4dc6ea62e6\\node_modules\\eslint",
+    "node.js.selected.package.standard": "",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
+    "ts.external.directory.path": "yarn:..\\gam-stargram-back\\package.json:typescript",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="이름이 지정되지 않았습니다" type="NodeJSConfigurationType" nameIsGenerated="true" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -154,6 +152,7 @@
     <option name="exactExcludedFiles">
       <list>
         <option value="$PROJECT_DIR$/../gam-stargram-back/app.js" />
+        <option value="$PROJECT_DIR$/../gam-stargram-back/app.d.ts" />
       </list>
     </option>
   </component>
