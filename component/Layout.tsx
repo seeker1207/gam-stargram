@@ -14,9 +14,6 @@ const ImageWrapper = styled.div`
   .small.image {
     width: 200px;
   }
-  .item {
-    top: 0.5em
-  }
   
 `;
 const MenuWrapper = styled.div`

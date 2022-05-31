@@ -1,15 +1,17 @@
 import React, { useCallback, useState } from 'react';
 import { Input, Label, Menu } from 'semantic-ui-react';
+import { mutate } from 'swr';
 import { logout } from '../api/userApi';
 
 function UserMenu() {
   const [activeItem, setActiveItem] = useState();
   const handleItemClick = useCallback(() => {
-
-  });
+    console.log('11');
+  }, []);
 
   const onLogoutButtonClick = useCallback(async () => {
     await logout();
+    await mutate('/user/login');
   }, []);
 
   return (

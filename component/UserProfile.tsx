@@ -6,15 +6,19 @@ import UserMenu from './UserMenu';
 const UserMenuWrapper = styled.div`
   position: absolute;
   right: 1.0em;
-  top: 5em;
+  top: 4em;
+`;
+
+const IconWrapper = styled(Icon)`
+    font-size: 3.0em !important;
 `;
 
 function UserProfile() {
   const [isClicked, setIsClicked] = useState(false);
   const menuContainer = useRef(null);
-  const iconWrapper = useRef(null);
+  const iconDivWrapper = useRef(null);
   const onClickOutsideHandler = useCallback((e) => {
-    if (isClicked && !iconWrapper.current.contains(e.target)) {
+    if (isClicked && !iconDivWrapper.current.contains(e.target)) {
       setIsClicked(false);
     }
   }, [isClicked]);
@@ -28,8 +32,8 @@ function UserProfile() {
 
   return (
     <>
-      <div ref={iconWrapper}>
-        <Icon
+      <div ref={iconDivWrapper}>
+        <IconWrapper
           link
           color="orange"
           name="user circle"

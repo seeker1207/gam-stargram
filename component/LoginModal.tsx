@@ -1,10 +1,9 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import useSWR, { useSWRConfig } from 'swr';
+import React, { useCallback, useState } from 'react';
+import { useSWRConfig } from 'swr';
 import { Modal, Image, Button, Form, Menu } from 'semantic-ui-react';
 import styled from 'styled-components';
-import { getUserFetcher, login } from '../api/userApi';
+import { login } from '../api/userApi';
 import useInput from '../hooks/useInput';
-import useLoginUser from '../hooks/useUser';
 
 const LoginButtonWrapper = styled.div`
   display: inline-block;
