@@ -52,6 +52,7 @@ function LoginModal() {
     }
   }, [email, password, mutate]);
 
+  // const onSignUp =
   const onEnterKeyPressEventHandler = useCallback((e) => {
     if (e.code === 'Enter') {
       onLogin();
@@ -122,18 +123,7 @@ function LoginModal() {
                   <Form.Group widths="equal">
                     <Form.Input fluid placeholder="년" />
                     <Form.Field fluid control="select">
-                      <option value="1">1월</option>
-                      <option value="2">2월</option>
-                      <option value="3">3월</option>
-                      <option value="4">4월</option>
-                      <option value="5">5월</option>
-                      <option value="6">6월</option>
-                      <option value="7">7월</option>
-                      <option value="8">8월</option>
-                      <option value="9">9월</option>
-                      <option value="10">10월</option>
-                      <option value="11">11월</option>
-                      <option value="12">12월</option>
+                      {Array(12).fill(null).map((_, idx) => <option value={idx + 1}>{idx + 1}월</option>)}
                     </Form.Field>
                     <Form.Input fluid placeholder="일" />
                   </Form.Group>
@@ -150,7 +140,7 @@ function LoginModal() {
             content={activeItem === 'login' ? '로그인' : '회원가입'}
             labelPosition="right"
             icon="checkmark"
-            onClick={() => onLogin()}
+            onClick={activeItem === 'login' ? () => onLogin() : () => 1}
             loading={loginLoading}
             disabled={loginLoading}
             positive
