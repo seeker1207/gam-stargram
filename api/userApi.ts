@@ -16,7 +16,11 @@ interface User {
 }
 
 function login(userInfo: loginReqInfo): Promise<User> {
-  return axios.post('http://localhost:3065/user/login', userInfo);
+  return axios.post('/user/login', userInfo);
+}
+
+function logout() {
+  return axios.post('/user/logout');
 }
 
 function getUserFetcher(id: string) {
@@ -26,4 +30,4 @@ function getUserFetcher(id: string) {
 
 const getLoginUserFetcher: Fetcher<User, string> = (url) => axios.get(url).then((res) => res.data);
 
-export { login, getUserFetcher, getLoginUserFetcher };
+export { login, logout, getUserFetcher, getLoginUserFetcher };

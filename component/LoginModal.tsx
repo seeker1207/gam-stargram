@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import useSWR, { useSWRConfig } from 'swr';
 import { Modal, Image, Button, Form, Menu } from 'semantic-ui-react';
 import styled from 'styled-components';
@@ -26,7 +26,6 @@ function LoginModal() {
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
   const { mutate } = useSWRConfig();
-  const { isLoading } = useLoginUser();
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
@@ -36,6 +35,12 @@ function LoginModal() {
     // await delay(1000);
     await mutate('/user/login', await login({ email, password }), false);
   }, [email, password]);
+
+  const onEnterKeyPressEventHandler = useCallback((e) => {
+    if (e.code === 'Enter') {
+      onLogin();
+    }
+  }, [onLogin]);
 
   return (
     <Modal
@@ -73,11 +78,11 @@ function LoginModal() {
             <FormFiledWrapper>
               <Form.Field>
                 <label htmlFor="email">이메일</label>
-                <input name="email" value={email} onChange={onChangeEmail} type="email" placeholder="Email" />
+                <input name="email" value={email} onChange={onChangeEmail} type="email" placeholder="Email" onKeyDown={onEnterKeyPressEventHandler} />
               </Form.Field>
               <Form.Field>
                 <label htmlFor="password">비밀번호</label>
-                <input name="password" value={password} onChange={onChangePassword} type="password" placeholder="Password" />
+                <input name="password" value={password} onChange={onChangePassword} type="password" placeholder="Password" onKeyDown={onEnterKeyPressEventHandler} />
               </Form.Field>
             </FormFiledWrapper>
           </Form>
