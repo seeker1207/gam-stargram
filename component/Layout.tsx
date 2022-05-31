@@ -82,7 +82,7 @@ export default function Layout({ children } : {children : ReactElement}) {
                 <Menu.Menu position="right">
                   <SearchBarWrapper>
                     <Menu.Item>
-                      <Input icon="search" placeholder="Search..." />
+                      <Input icon="search" placeholder="게임을 검색해보세요..." />
                     </Menu.Item>
                   </SearchBarWrapper>
                   <LoginMenuWrapper>

@@ -43,34 +43,27 @@ export default function Home() {
   }, [startBtnClicked]);
 
   return (
-    <>
-      <Head>
-        <meta charSet="UTF-8" />
-        <title>GamStargram</title>
-        <link rel="icon" href="/favicon.svg" />
-      </Head>
-      <Layout>
-        <MainHeaderWrapper>
-          <Header as="h1" textAlign="center">
-            당신의 게임 업적🥇,
-          </Header>
-          <Header as="h1" textAlign="center">
-            동료들에게 자랑 해보세요.
-          </Header>
-          <Header textAlign="center">
-            <Link href="/photo/main" passHref>
-              <Header.Content>
-                <StartTextWrapper>
-                  <h2>시작하기 </h2>
-                </StartTextWrapper>
-                <IconWrapper>
-                  <Icon link name="gamepad" size="massive" color="violet" />
-                </IconWrapper>
-              </Header.Content>
-            </Link>
-          </Header>
-        </MainHeaderWrapper>
-      </Layout>
-    </>
+    <Layout>
+      <MainHeaderWrapper>
+        <Header as="h1" textAlign="center">
+          당신의 게임 업적🥇,
+        </Header>
+        <Header as="h1" textAlign="center">
+          동료들에게 자랑 해보세요.
+        </Header>
+        <Header textAlign="center">
+          <Link href="/photo/main" passHref>
+            <Header.Content>
+              <StartTextWrapper>
+                <h2>시작하기 </h2>
+              </StartTextWrapper>
+              <IconWrapper>
+                <Icon link name="gamepad" size="massive" color="violet" />
+              </IconWrapper>
+            </Header.Content>
+          </Link>
+        </Header>
+      </MainHeaderWrapper>
+    </Layout>
   );
 }
