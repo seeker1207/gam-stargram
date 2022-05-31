@@ -5,6 +5,7 @@ import Link from 'next/link';
 import LoginModal from './LoginModal';
 import useUser from '../hooks/useUser';
 import useLoginUser from '../hooks/useUser';
+import UserProfile from './UserProfile';
 
 const ImageWrapper = styled.div`
   @media all and (max-width:1250px) {
@@ -13,6 +14,10 @@ const ImageWrapper = styled.div`
   .small.image {
     width: 200px;
   }
+  .item {
+    top: 0.5em
+  }
+  
 `;
 const MenuWrapper = styled.div`
   cursor: pointer;
@@ -53,7 +58,7 @@ const SearchBarWrapper = styled.div`
 
 export default function Layout({ children } : {children : ReactElement}) {
   const [visible, setVisible] = useState(false);
-  const { user, isLoggedOut } = useLoginUser();
+  const { isLoggedOut } = useLoginUser();
   return (
     <>
       <MenuGridWrapper>
@@ -85,7 +90,7 @@ export default function Layout({ children } : {children : ReactElement}) {
                   </SearchBarWrapper>
                   <LoginMenuWrapper>
                     <Menu.Item>
-                      {isLoggedOut ? <LoginModal /> : <Icon link color="violet" name="user circle" size="huge" />}
+                      {isLoggedOut ? <LoginModal /> : <UserProfile />}
 
                     </Menu.Item>
                   </LoginMenuWrapper>
