@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="프론트 로그인 swr 구현">
+    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="로그인시 1초 기다리는 코드 추가 (테스트용)">
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/controller/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/controller/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/passport/local.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/passport/local.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/LoginModal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../gam-stargram-back" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -27,28 +29,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "16.14.2",
-    "javascript.nodejs.core.library.typings.version": "16.11.36",
-    "js.last.introduce.type": "CONST",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/React portfolio/nodebird",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "C:\\React portfolio\\gam-stargram-back\\.yarn\\unplugged\\eslint-npm-8.16.0-4dc6ea62e6\\node_modules\\eslint",
-    "node.js.selected.package.standard": "",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "yarn:..\\gam-stargram-back\\package.json:typescript",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.14.2&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.36&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/React portfolio/nodebird&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\React portfolio\\gam-stargram-back\\.yarn\\unplugged\\eslint-npm-8.16.0-4dc6ea62e6\\node_modules\\eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;yarn:..\\gam-stargram-back\\package.json:typescript&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="이름이 지정되지 않았습니다" type="NodeJSConfigurationType" nameIsGenerated="true" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -109,6 +111,7 @@
       <workItem from="1653631446968" duration="5946000" />
       <workItem from="1653756349197" duration="1655000" />
       <workItem from="1653813227432" duration="6063000" />
+      <workItem from="1654091547556" duration="1140000" />
     </task>
     <task id="LOCAL-00001" summary="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
       <created>1653036824027</created>
@@ -145,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653910201625</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="로그인시 1초 기다리는 코드 추가 (테스트용)">
+      <created>1653911076394</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653911076394</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +184,8 @@
     <MESSAGE value="백엔드 yarn berry로 전환 작업" />
     <MESSAGE value="백엔드 로그인 기능 구현" />
     <MESSAGE value="프론트 로그인 swr 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="프론트 로그인 swr 구현" />
+    <MESSAGE value="로그인시 1초 기다리는 코드 추가 (테스트용)" />
+    <option name="LAST_COMMIT_MESSAGE" value="로그인시 1초 기다리는 코드 추가 (테스트용)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
