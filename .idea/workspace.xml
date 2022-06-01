@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="로그인시 1초 기다리는 코드 추가 (테스트용)">
-      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/controller/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/controller/UserController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/passport/local.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/passport/local.ts" afterDir="false" />
+    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="백엔드 로그인시 오류메세지 포함해서 전송">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/LoginModal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../gam-stargram-back" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -111,7 +109,7 @@
       <workItem from="1653631446968" duration="5946000" />
       <workItem from="1653756349197" duration="1655000" />
       <workItem from="1653813227432" duration="6063000" />
-      <workItem from="1654091547556" duration="1140000" />
+      <workItem from="1654091547556" duration="2829000" />
     </task>
     <task id="LOCAL-00001" summary="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
       <created>1653036824027</created>
@@ -155,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653911076394</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="백엔드 로그인시 오류메세지 포함해서 전송">
+      <created>1654092765314</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654092765314</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +190,8 @@
     <MESSAGE value="백엔드 로그인 기능 구현" />
     <MESSAGE value="프론트 로그인 swr 구현" />
     <MESSAGE value="로그인시 1초 기다리는 코드 추가 (테스트용)" />
-    <option name="LAST_COMMIT_MESSAGE" value="로그인시 1초 기다리는 코드 추가 (테스트용)" />
+    <MESSAGE value="백엔드 로그인시 오류메세지 포함해서 전송" />
+    <option name="LAST_COMMIT_MESSAGE" value="백엔드 로그인시 오류메세지 포함해서 전송" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

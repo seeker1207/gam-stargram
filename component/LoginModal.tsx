@@ -29,14 +29,18 @@ function isValidEmail(inputText: string) {
   const mailFormat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/;
   return inputText.match(mailFormat);
 }
+
 function LoginModal() {
   const [open, setOpen] = useState(false);
+  const [secondOpen, setSecondOpen] = useState(false);
   const [loginLoading, setLoginLoading] = useState(false);
   const [activeItem, setActiveItem] = useState('login');
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
   const [emailCheck, setEmailCheck] = useState(false);
+  const [loginError, setLoginError] = useState('');
   const { mutate } = useSWRConfig();
+
   const inputWrapper = useRef(null);
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
@@ -46,9 +50,16 @@ function LoginModal() {
     // await delay(1000);
     if (isValidEmail(email)) {
       setLoginLoading(true);
-      await mutate('/user/login', await login({ email, password }), false);
+      try {
+        await mutate('/user/login', await login({ email, password }), false);
+      } catch (e) {
+        setLoginError(e.response.data.error);
+        setSecondOpen(true);
+        setLoginLoading(false);
+      }
     } else {
       setEmailCheck(true);
+      setLoginLoading(false);
     }
   }, [email, password, mutate]);
 
@@ -98,7 +109,7 @@ function LoginModal() {
               && (
               <FormFiledWrapper ref={inputWrapper}>
                 <Form.Input
-                  error={emailCheck && { content: '이메일을 다시 확인해주세요', pointing: 'below' }}
+                  error={emailCheck && { content: '이메일 형식이 잘못되었습니다.', pointing: 'below' }}
                   fluid
                   type="email"
                   label="이메일"
@@ -151,6 +162,24 @@ function LoginModal() {
           취소
         </Button>
       </Modal.Actions>
+      <Modal
+        onClose={() => setSecondOpen(false)}
+        open={secondOpen}
+        size="tiny"
+      >
+        <Modal.Header style={{ color: '#5829BBFF' }}>로그인 실패</Modal.Header>
+        <Modal.Content>
+          <p>{loginError}</p>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button
+            color="violet"
+            icon="check"
+            content="확인"
+            onClick={() => setSecondOpen(false)}
+          />
+        </Modal.Actions>
+      </Modal>
     </Modal>
   );
 }
