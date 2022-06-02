@@ -1,9 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useSWRConfig } from 'swr';
-import { Modal, Image, Button, Form, Menu, Label, Rail, Segment } from 'semantic-ui-react';
+import { Modal, Image, Button, Form, Menu, Label, Rail, Segment, SemanticCOLORS } from 'semantic-ui-react';
 import styled from 'styled-components';
-import { login } from '../api/userApi';
+import { login, signUp } from '../api/userApi';
 import useInput from '../hooks/useInput';
+import SignUpForm from './signUpForm';
+import { User } from '../types/userTypes';
 
 const LoginButtonWrapper = styled.div`
   display: inline-block;
@@ -16,12 +18,6 @@ const FormFiledWrapper = styled.div`
   input:focus {
     border-color: #5829BBFF !important;
   }
-`;
-
-const LabelWrapper = styled.label`
-  font-weight: 600;
-  margin: 4px;
-  display: inline-block;
 `;
 
 const ToastMsg = styled(Rail)`
@@ -68,7 +64,11 @@ function LoginModal() {
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
   const [emailCheck, setEmailCheck] = useState(false);
-  const [loginError, setLoginError] = useState('');
+  const [toastMsg, setToastMsg] = useState('');
+  const [toastColor, setToastColor] : [toastColor: 'red' | 'green', setToastColor: any] = useState('red');
+  const InitialSignUpInfo: User = { email: '', nickname: '' };
+  const [signUpInfo, setSignUpInfo] = useState(InitialSignUpInfo);
+
   const { mutate } = useSWRConfig();
 
   const inputWrapper = useRef(null);
@@ -77,8 +77,6 @@ function LoginModal() {
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   const onLogin = useCallback(async () => {
-    // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    // await delay(1000);
     if (toastTimeoutHandler.current) {
       clearTimeout(toastTimeoutHandler.current);
     }
@@ -86,8 +84,9 @@ function LoginModal() {
       setLoginLoading(true);
       try {
         await mutate('/user/login', await login({ email, password }), false);
-      } catch (e) {
-        setLoginError(e.response.data.error);
+      } catch (error) {
+        setToastColor('red');
+        setToastMsg(error.response.data.error);
         setLoginLoading(false);
         setToastAlert(true);
         toastTimeoutHandler.current = setTimeout(() => {
@@ -100,10 +99,29 @@ function LoginModal() {
     }
   }, [email, password, mutate]);
 
-  // const onSignUp =
-  const onEnterKeyPressEventHandler = useCallback((e) => {
+  const onSignUp = useCallback(async () => {
+    try {
+      setLoginLoading(true);
+      await signUp(signUpInfo);
+      setToastColor('green');
+      setToastMsg('회원가입 완료! 자동으로 로그인됩니다.');
+      setToastAlert(true);
+      setTimeout(async () => {
+        setToastAlert(false);
+        await mutate(
+          '/user/login',
+          await login({ email: signUpInfo.email, password: signUpInfo.password }),
+          false,
+        );
+      }, 3500);
+    } catch (error) {
+      setToastMsg(error.response.data.error);
+    }
+  }, [signUpInfo]);
+
+  const onEnterKeyPressEventHandler = useCallback(async (e) => {
     if (e.code === 'Enter') {
-      onLogin();
+      await onLogin();
     }
   }, [onLogin]);
 
@@ -122,15 +140,13 @@ function LoginModal() {
           {activeItem === 'login' ? '에 로그인' : '에 가입하세요'}
         </div>
       </Modal.Header>
-
       <Modal.Content>
         { toastAlert && (
         <ToastMsg size="huge" internal position="left">
-          <Segment inverted color="red">{loginError}</Segment>
+          <Segment inverted color={toastColor}>{toastMsg}</Segment>
         </ToastMsg>
         )}
         <Modal.Description>
-
           <Menu pointing secondary color="violet">
             <Menu.Item
               name="login"
@@ -148,9 +164,7 @@ function LoginModal() {
               회원가입
             </Menu.Item>
           </Menu>
-
           <Form>
-
             {activeItem === 'login'
               && (
               <FormFiledWrapper ref={inputWrapper}>
@@ -160,6 +174,7 @@ function LoginModal() {
                   type="email"
                   label="이메일"
                   placeholder="이메일"
+                  name="email"
                   value={email}
                   onChange={onChangeEmail}
                   onKeyDown={onEnterKeyPressEventHandler}
@@ -171,35 +186,18 @@ function LoginModal() {
               </FormFiledWrapper>
               )}
             {activeItem === 'signUp'
-              && (
-                <FormFiledWrapper>
-                  <Form.Input fluid type="email" label="이메일" placeholder="이메일" />
-                  <Form.Input fluid type="password" label="비밀번호" placeholder="비밀번호" />
-                  <Form.Input fluid type="password" label="비밀번호 확인" placeholder="비밀번호 확인" />
-                  <LabelWrapper>생년월일</LabelWrapper>
-                  <Form.Group widths="equal">
-                    <Form.Input fluid placeholder="년" />
-                    <Form.Field fluid control="select">
-                      {Array(12).fill(null).map((_, idx) => <option value={idx + 1}>{idx + 1}월</option>)}
-                    </Form.Field>
-                    <Form.Input fluid placeholder="일" />
-                  </Form.Group>
-
-                </FormFiledWrapper>
-              )}
+              && <SignUpForm setSignUpInfo={setSignUpInfo} />}
           </Form>
         </Modal.Description>
       </Modal.Content>
-
       <Modal.Actions>
-
         <LoginButtonWrapper>
-          <Button
+          <Form.Button
             color="instagram"
             content={activeItem === 'login' ? '로그인' : '회원가입'}
             labelPosition="right"
             icon="checkmark"
-            onClick={activeItem === 'login' ? () => onLogin() : () => 1}
+            onClick={activeItem === 'login' ? onLogin : onSignUp}
             loading={loginLoading}
             disabled={loginLoading}
             positive

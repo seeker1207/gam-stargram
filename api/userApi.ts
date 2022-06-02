@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { Fetcher } from 'swr';
+import { User } from '../types/userTypes';
 
 axios.defaults.baseURL = 'http://localhost:3065';
 axios.defaults.withCredentials = true;
@@ -10,17 +11,16 @@ interface loginReqInfo {
   password: string
 }
 
-interface User {
-  email: string
-  nickname: string
-}
-
 function login(userInfo: loginReqInfo): Promise<User> {
   return axios.post('/user/login', userInfo);
 }
 
 function logout() {
   return axios.post('/user/logout');
+}
+
+function signUp(user: User) {
+  return axios.post('/user', user);
 }
 
 function getUserFetcher(id: string) {
@@ -30,4 +30,4 @@ function getUserFetcher(id: string) {
 
 const getLoginUserFetcher: Fetcher<User, string> = (url) => axios.get(url).then((res) => res.data);
 
-export { login, logout, getUserFetcher, getLoginUserFetcher };
+export { login, logout, signUp, getUserFetcher, getLoginUserFetcher };

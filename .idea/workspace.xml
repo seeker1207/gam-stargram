@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="프론트엔드 로그인기능 오류메세지 모달 구현">
+    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="프론트엔드 로그인시 유저정보 틀릴경우 토스트 메세지 띄우는 로직 구현">
       <change afterPath="$PROJECT_DIR$/component/signUpForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/passport/local.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/passport/local.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/userTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/models/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/models/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/service/UserService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/service/UserService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/userApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/userApi.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/component/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/LoginModal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,28 +32,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "16.14.2",
-    "javascript.nodejs.core.library.typings.version": "16.11.36",
-    "js.last.introduce.type": "CONST",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/React portfolio/nodebird",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "C:\\React portfolio\\gam-stargram-back\\.yarn\\unplugged\\eslint-npm-8.16.0-4dc6ea62e6\\node_modules\\eslint",
-    "node.js.selected.package.standard": "",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.sourceCode.TypeScript",
-    "ts.external.directory.path": "yarn:..\\gam-stargram-back\\package.json:typescript",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.14.2&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.36&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/React portfolio/nodebird&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\React portfolio\\gam-stargram-back\\.yarn\\unplugged\\eslint-npm-8.16.0-4dc6ea62e6\\node_modules\\eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.TypeScript&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;yarn:..\\gam-stargram-back\\package.json:typescript&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="이름이 지정되지 않았습니다" type="NodeJSConfigurationType" nameIsGenerated="true" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -113,7 +114,8 @@
       <workItem from="1653756349197" duration="1655000" />
       <workItem from="1653813227432" duration="6063000" />
       <workItem from="1654091547556" duration="3279000" />
-      <workItem from="1654131033908" duration="8593000" />
+      <workItem from="1654131033908" duration="12396000" />
+      <workItem from="1654174423670" duration="6005000" />
     </task>
     <task id="LOCAL-00001" summary="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
       <created>1653036824027</created>
@@ -171,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654094785314</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="프론트엔드 로그인시 유저정보 틀릴경우 토스트 메세지 띄우는 로직 구현">
+      <created>1654157965464</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654157965464</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +212,8 @@
     <MESSAGE value="로그인시 1초 기다리는 코드 추가 (테스트용)" />
     <MESSAGE value="백엔드 로그인시 오류메세지 포함해서 전송" />
     <MESSAGE value="프론트엔드 로그인기능 오류메세지 모달 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="프론트엔드 로그인기능 오류메세지 모달 구현" />
+    <MESSAGE value="프론트엔드 로그인시 유저정보 틀릴경우 토스트 메세지 띄우는 로직 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="프론트엔드 로그인시 유저정보 틀릴경우 토스트 메세지 띄우는 로직 구현" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
