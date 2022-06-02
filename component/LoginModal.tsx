@@ -1,6 +1,6 @@
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useSWRConfig } from 'swr';
-import { Modal, Image, Button, Form, Menu, Label } from 'semantic-ui-react';
+import { Modal, Image, Button, Form, Menu, Label, Rail, Segment } from 'semantic-ui-react';
 import styled from 'styled-components';
 import { login } from '../api/userApi';
 import useInput from '../hooks/useInput';
@@ -24,6 +24,35 @@ const LabelWrapper = styled.label`
   display: inline-block;
 `;
 
+const ToastMsg = styled(Rail)`
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  
+  .segment {
+    position: relative;
+    opacity: 0;
+    bottom: 2em;
+    animation: 3.5s linear alternate showToast;
+    
+    @keyframes showToast {
+      5% {
+        opacity: 1;
+        bottom: 0;
+      }
+      
+      95% {
+          opacity: 1;
+          bottom: 0;
+      }
+      
+      100% {
+        opacity: 0;
+        bottom: 2em;
+      }
+    }
+  }
+`;
 function isValidEmail(inputText: string) {
   if (!inputText) return false;
   const mailFormat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/;
@@ -32,7 +61,8 @@ function isValidEmail(inputText: string) {
 
 function LoginModal() {
   const [open, setOpen] = useState(false);
-  const [secondOpen, setSecondOpen] = useState(false);
+  // const [secondOpen, setSecondOpen] = useState(false);
+  const [toastAlert, setToastAlert] = useState(false);
   const [loginLoading, setLoginLoading] = useState(false);
   const [activeItem, setActiveItem] = useState('login');
   const [email, onChangeEmail] = useInput('');
@@ -42,20 +72,27 @@ function LoginModal() {
   const { mutate } = useSWRConfig();
 
   const inputWrapper = useRef(null);
+  const toastTimeoutHandler = useRef(null);
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   const onLogin = useCallback(async () => {
     // const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
     // await delay(1000);
+    if (toastTimeoutHandler.current) {
+      clearTimeout(toastTimeoutHandler.current);
+    }
     if (isValidEmail(email)) {
       setLoginLoading(true);
       try {
         await mutate('/user/login', await login({ email, password }), false);
       } catch (e) {
         setLoginError(e.response.data.error);
-        setSecondOpen(true);
         setLoginLoading(false);
+        setToastAlert(true);
+        toastTimeoutHandler.current = setTimeout(() => {
+          setToastAlert(false);
+        }, 3500);
       }
     } else {
       setEmailCheck(true);
@@ -85,8 +122,15 @@ function LoginModal() {
           {activeItem === 'login' ? '에 로그인' : '에 가입하세요'}
         </div>
       </Modal.Header>
+
       <Modal.Content>
+        { toastAlert && (
+        <ToastMsg size="huge" internal position="left">
+          <Segment inverted color="red">{loginError}</Segment>
+        </ToastMsg>
+        )}
         <Modal.Description>
+
           <Menu pointing secondary color="violet">
             <Menu.Item
               name="login"
@@ -104,7 +148,9 @@ function LoginModal() {
               회원가입
             </Menu.Item>
           </Menu>
+
           <Form>
+
             {activeItem === 'login'
               && (
               <FormFiledWrapper ref={inputWrapper}>
@@ -144,7 +190,9 @@ function LoginModal() {
           </Form>
         </Modal.Description>
       </Modal.Content>
+
       <Modal.Actions>
+
         <LoginButtonWrapper>
           <Button
             color="instagram"
@@ -162,24 +210,6 @@ function LoginModal() {
           취소
         </Button>
       </Modal.Actions>
-      <Modal
-        onClose={() => setSecondOpen(false)}
-        open={secondOpen}
-        size="tiny"
-      >
-        <Modal.Header style={{ color: '#5829BBFF' }}>로그인 실패</Modal.Header>
-        <Modal.Content>
-          <p>{loginError}</p>
-        </Modal.Content>
-        <Modal.Actions>
-          <Button
-            color="violet"
-            icon="check"
-            content="확인"
-            onClick={() => setSecondOpen(false)}
-          />
-        </Modal.Actions>
-      </Modal>
     </Modal>
   );
 }

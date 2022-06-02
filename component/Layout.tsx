@@ -1,5 +1,5 @@
 import React, { ReactElement, useState } from 'react';
-import { Button, Grid, GridRow, Icon, Image, Input, Menu, Sidebar } from 'semantic-ui-react';
+import { Button, Grid, GridRow, Icon, Image, Input, Menu, Rail, Sidebar } from 'semantic-ui-react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import LoginModal from './LoginModal';
