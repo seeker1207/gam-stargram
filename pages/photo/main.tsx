@@ -8,7 +8,7 @@ const HeaderWrapper = styled.div`
   margin-top: 10em;
   animation-duration: 2s;
   animation-name: showheader;
-  
+  padding: 0 1em;
   @media all and (max-width:800px) {
     display: none;
   }
@@ -29,7 +29,7 @@ const ImageGridWrapper = styled.div`
   margin-top: 13%;
   animation-duration: 2s;
   animation-name: showImage;
-  
+  padding: 0 1em;
   @keyframes showImage {
     from {
       opacity: 0;

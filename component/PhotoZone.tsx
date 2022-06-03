@@ -10,6 +10,8 @@ interface Props {
 }
 
 const PlaceholderWrapper = styled(Placeholder)`
+  margin: 0 auto;
+  
   .image {
     margin-top: 75%;
     height: 0 !important;
@@ -28,9 +30,10 @@ function PhotoZone({ col, imgList, row } : Props) {
   const calculatedRow = row ?? (imgList.length / col) + 1;
 
   return (
-    <Grid celled>
-
-      {
+    <>
+      <Header size="medium" color="violet">#리그오브레전드 #lol #롤 #페이커</Header>
+      <Grid>
+        {
         Array(calculatedRow).fill(null).map((_, idx) => (
           <Grid.Row key={uuid()} columns={col}>
             { getGridColumns(
@@ -42,8 +45,8 @@ function PhotoZone({ col, imgList, row } : Props) {
           </Grid.Row>
         ))
       }
-
-    </Grid>
+      </Grid>
+    </>
   );
 }
 
