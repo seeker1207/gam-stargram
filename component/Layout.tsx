@@ -7,6 +7,10 @@ import useUser from '../hooks/useUser';
 import useLoginUser from '../hooks/useUser';
 import UserProfile from './UserProfile';
 
+const LayoutWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 2000px;
+`;
 const ImageWrapper = styled.div`
   @media all and (max-width:1250px) {
     display: none;
@@ -28,11 +32,12 @@ const MenuWrapper = styled.div`
 `;
 
 const MenuGridWrapper = styled(GridRow)`
-
   .row:first-of-type {
     position: fixed;
     z-index: 3;
     background: white;
+    margin: 0 auto;
+    max-width: 2000px;
   }
   
 `;
@@ -57,7 +62,7 @@ export default function Layout({ children } : {children : ReactElement}) {
   const [visible, setVisible] = useState(false);
   const { isLoggedOut } = useLoginUser();
   return (
-    <>
+    <LayoutWrapper>
       <MenuGridWrapper>
         <Grid>
           <GridRow>
@@ -138,7 +143,6 @@ export default function Layout({ children } : {children : ReactElement}) {
           <Grid.Column width={3} />
         </Grid.Row>
       </Grid>
-
-    </>
+    </LayoutWrapper>
   );
 }

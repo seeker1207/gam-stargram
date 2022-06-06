@@ -21,10 +21,9 @@ const PlaceholderWrapper = styled(Placeholder)`
 function PhotoZone({ col, imgList, row } : Props) {
   const getGridColumns = (rowImgList) => rowImgList
     .map((img : string) => (
-      <Grid.Column key={uuid()}>
+      <Grid.Column key={uuid()} style={{ padding: 0 }}>
         <PlaceholderWrapper><Placeholder.Image /></PlaceholderWrapper>
         {/* <Image href="google.com" src={img} /> */}
-        <Header size="medium">이미지 제목</Header>
       </Grid.Column>
     ));
   const calculatedRow = row ?? (imgList.length / col) + 1;
