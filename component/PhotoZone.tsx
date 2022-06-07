@@ -7,6 +7,7 @@ interface Props {
   col: SemanticWIDTHSNUMBER;
   row: number;
   imgList: Array<String>;
+  isLoading: boolean;
 }
 
 const PlaceholderWrapper = styled(Placeholder)`
@@ -18,34 +19,34 @@ const PlaceholderWrapper = styled(Placeholder)`
   }
 `;
 
-function PhotoZone({ col, imgList, row } : Props) {
+const ImageWrapper = styled(Image)`
+  height: 100%;
+  object-fit: cover;
+`;
+
+function PhotoZone({ col, imgList, row, isLoading } : Props) {
   const getGridColumns = (rowImgList) => rowImgList
     .map((img : string) => (
-      <Grid.Column key={uuid()} style={{ padding: 0 }}>
-        <PlaceholderWrapper><Placeholder.Image /></PlaceholderWrapper>
-        {/* <Image href="google.com" src={img} /> */}
+      <Grid.Column key={uuid()} style={{ padding: 0, background: '#d3badb', overflow: 'hidden', height: '110%' }}>
+        <ImageWrapper src={`http://localhost:3065/${img}`} />
       </Grid.Column>
     ));
   const calculatedRow = row ?? (imgList.length / col) + 1;
 
   return (
-    <>
-      <Header size="medium" color="violet">#리그오브레전드 #lol #롤 #페이커</Header>
-      <Grid>
-        {
+    <Grid>
+      {
         Array(calculatedRow).fill(null).map((_, idx) => (
           <Grid.Row key={uuid()} columns={col}>
-            { getGridColumns(
-              imgList.slice(
+            { isLoading ? Array(col).fill(null).map(() => <PlaceholderWrapper><Placeholder.Image /></PlaceholderWrapper>)
+              : getGridColumns(imgList.slice(
                 (idx + 1) * col - col,
                 Math.min(imgList.length, (idx + 1) * col),
-              ),
-            )}
+              ))}
           </Grid.Row>
         ))
       }
-      </Grid>
-    </>
+    </Grid>
   );
 }
 

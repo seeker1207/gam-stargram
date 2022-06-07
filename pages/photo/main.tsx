@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Header } from 'semantic-ui-react';
 import PhotoZone from '../../component/PhotoZone';
 import Layout from '../../component/Layout';
+import useHashtag from '../../hooks/useHashtag';
 
 const HeaderWrapper = styled.div`
   margin-top: 10em;
@@ -43,6 +44,8 @@ const ImageGridWrapper = styled.div`
 `;
 
 function Main() {
+  const { hashtag: lolHashtag, isLoading: lolImgLoading } = useHashtag('롤');
+  console.log(lolHashtag);
   return (
     <Layout>
       <div style={{ marginTop: '10em' }}>
@@ -55,17 +58,20 @@ function Main() {
           </Header>
         </HeaderWrapper>
         <ImageGridWrapper>
+          <Header size="medium" color="violet">#리그오브레전드 #lol #롤 #페이커</Header>
           <PhotoZone
             col={3}
             row={2}
-            imgList={Array(15).fill(null).map(() => 'https://react.semantic-ui.com/images/wireframe/image.png')}
+            imgList={!lolImgLoading ? lolHashtag.posts.map((post) => post.photos[0].filePath) : null}
+            isLoading={lolImgLoading}
           />
         </ImageGridWrapper>
         <ImageGridWrapper>
           <PhotoZone
             col={3}
             row={2}
-            imgList={Array(15).fill(null).map(() => 'https://react.semantic-ui.com/images/wireframe/image.png')}
+            imgList={!lolImgLoading ? lolHashtag.posts.map((post) => post.photos[0].filePath) : null}
+            isLoading={lolImgLoading}
           />
         </ImageGridWrapper>
 
