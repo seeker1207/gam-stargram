@@ -2,6 +2,7 @@ import React, { useCallback, useRef, useState } from 'react';
 import { Button, Form, Grid, Header, Icon, Menu, Modal, Segment, TextArea } from 'semantic-ui-react';
 import styled from 'styled-components';
 import { photoUpload } from '../api/postApi';
+import PhotoCarousel from './PhotoCarousel';
 
 const SegmentWrapper = styled(Segment)`
     min-height: 30rem !important;
@@ -59,6 +60,7 @@ function PostMyPhotoModal() {
                   <Icon name="file image outline" />
                   내 게임 사진을 드래그하거나 올려보세요.
                 </Header>
+                <PhotoCarousel />
                 <input required type="file" name="image" hidden multiple ref={imageInput} onChange={onChangeImages} />
                 <Button primary onClick={onClickImages}>사진 올리기</Button>
               </SegmentWrapper>
