@@ -2,9 +2,9 @@ import React, { useCallback, useState } from 'react';
 import { Input, Label, Menu } from 'semantic-ui-react';
 import { mutate } from 'swr';
 import { logout } from '../api/userApi';
+import PostMyPhotoModal from './PostMyPhotoModal';
 
 function UserMenu() {
-  const [activeItem, setActiveItem] = useState();
   const handleItemClick = useCallback(() => {
     console.log('11');
   }, []);
@@ -18,7 +18,6 @@ function UserMenu() {
     <Menu vertical>
       <Menu.Item
         name="myPhoto"
-        active={activeItem === 'myPhoto'}
         onClick={handleItemClick}
       >
         내 사진
@@ -26,12 +25,12 @@ function UserMenu() {
 
       <Menu.Item
         name="updates"
-        active={activeItem === 'updates'}
         onClick={handleItemClick}
       >
         <Label color="violet">1</Label>
         관심 게이머 사진
       </Menu.Item>
+      <PostMyPhotoModal />
       <Menu.Item
         name="loggedOut"
         onClick={onLogoutButtonClick}

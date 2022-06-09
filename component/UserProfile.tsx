@@ -17,8 +17,12 @@ function UserProfile() {
   const [isClicked, setIsClicked] = useState(false);
   const menuContainer = useRef(null);
   const iconDivWrapper = useRef(null);
+  const menu = useRef(null);
   const onClickOutsideHandler = useCallback((e) => {
-    if (isClicked && !iconDivWrapper.current.contains(e.target)) {
+    const activeModal = document.querySelector('.modal.visible.active') ?? document;
+    if (isClicked && !iconDivWrapper.current.contains(e.target)
+      && !menuContainer.current.contains(e.target)
+      && !activeModal.contains(e.target)) {
       setIsClicked(false);
     }
   }, [isClicked]);
@@ -35,7 +39,7 @@ function UserProfile() {
       <div ref={iconDivWrapper}>
         <IconWrapper
           link
-          color="orange"
+          color="gray"
           name="user circle"
           size="huge"
           onClick={() => setIsClicked((prevState) => !prevState)}
