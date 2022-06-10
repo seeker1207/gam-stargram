@@ -3,9 +3,10 @@ import { Button, Form, Grid, Header, Icon, Menu, Modal, Segment, TextArea } from
 import styled from 'styled-components';
 import { photoUpload } from '../api/postApi';
 import PhotoCarousel from './PhotoCarousel';
+import Toast from './Toast';
 
 const SegmentWrapper = styled(Segment)`
-    min-height: 30rem !important;
+  min-height: 30rem !important;
 `;
 
 const TextBoxWrapper = styled(TextArea)`
@@ -14,28 +15,60 @@ const TextBoxWrapper = styled(TextArea)`
 
 function PostMyPhotoModal() {
   const [open, setOpen] = useState(false);
+  const [isUploaded, setIsUploaded] = useState(false);
+  const [openToast, setOpenToast] = useState(false);
+  const [uploadedPhotosFileNames, setUploadedPhotosFileNames] = useState(null);
   const imageInput = useRef(null);
+
+  const uploadPhoto = async (photoFormData) => {
+    try {
+      const { data: photoFilePaths } = await photoUpload(photoFormData);
+      setIsUploaded(true);
+      setOpenToast(true);
+      setUploadedPhotosFileNames(photoFilePaths);
+
+      setTimeout(() => setOpenToast(false), 3500);
+      console.log(photoFilePaths);
+    } catch (error) {
+      alert(error.response.data.error);
+    }
+  };
   const onClickImages = useCallback(() => {
     imageInput.current.click();
   }, []);
 
   const onChangeImages = useCallback(async (e) => {
     console.log(e.target.files);
-    const { files } : {files: string[]} = e.target;
+    const { files } : {files: File[]} = e.target;
     const photoFormData = new FormData();
-
+    console.log(files);
     Array.from(files).forEach((f) => {
-      photoFormData.append('photo', f);
+      photoFormData.append('photo', f, encodeURI(f.name));
     });
-
-    await photoUpload(photoFormData);
     console.log(photoFormData);
+    await uploadPhoto(photoFormData);
   }, []);
 
   const onSubmitPost = () => {
     console.log(3434);
   };
 
+  const dropHandler = async (e) => {
+    e.preventDefault();
+
+    if (e.dataTransfer.files) {
+      const photoFormData = new FormData();
+      Array.from(e.dataTransfer.files).forEach((f) => {
+        photoFormData.append('photo', f, encodeURI(f.name));
+      });
+
+      await uploadPhoto(photoFormData);
+    }
+  };
+
+  const dragOverHandler = (e) => {
+    e.preventDefault();
+  };
   return (
     <Modal
       onClose={() => setOpen(false)}
@@ -51,19 +84,24 @@ function PostMyPhotoModal() {
       size="large"
     >
       <Modal.Header>내 게임 사진 올리기</Modal.Header>
+      {openToast && <Toast toastColor="green" toastMsg="이미지 업로드 완료! 이미지를 드래그하여 다음이미지를 볼 수 있습니다." />}
       <Modal.Content>
         <Grid columns={2} divided>
           <Grid.Row>
             <Grid.Column width={10}>
-              <SegmentWrapper placeholder>
-                <Header icon>
-                  <Icon name="file image outline" />
-                  내 게임 사진을 드래그하거나 올려보세요.
-                </Header>
-                <PhotoCarousel />
-                <input required type="file" name="image" hidden multiple ref={imageInput} onChange={onChangeImages} />
-                <Button primary onClick={onClickImages}>사진 올리기</Button>
-              </SegmentWrapper>
+              {isUploaded ? (
+                <PhotoCarousel filenames={uploadedPhotosFileNames} />
+              )
+                : (
+                  <SegmentWrapper placeholder onDrop={dropHandler} onDragOver={dragOverHandler}>
+                    <Header icon>
+                      <Icon name="file image outline" />
+                      내 게임 사진을 드래그하거나 올려보세요.
+                    </Header>
+                    <input required type="file" name="image" hidden multiple ref={imageInput} onChange={onChangeImages} />
+                    <Button primary onClick={onClickImages}>사진 올리기</Button>
+                  </SegmentWrapper>
+                )}
             </Grid.Column>
             <Grid.Column width={6}>
               <Form onSubmit={onSubmitPost}>

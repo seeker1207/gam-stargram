@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Icon } from 'semantic-ui-react';
 import styled from 'styled-components';
+import { Swiper } from 'swiper/react';
 import UserMenu from './UserMenu';
 
 const UserMenuWrapper = styled.div`
@@ -17,20 +18,22 @@ function UserProfile() {
   const [isClicked, setIsClicked] = useState(false);
   const menuContainer = useRef(null);
   const iconDivWrapper = useRef(null);
-  const menu = useRef(null);
   const onClickOutsideHandler = useCallback((e) => {
-    const activeModal = document.querySelector('.modal.visible.active') ?? document;
+    const activeModal = document.querySelector('.modal.visible.active');
+    console.log(e.target);
+    if (activeModal && !activeModal.contains(e.target)) {
+      setIsClicked(false);
+    }
     if (isClicked && !iconDivWrapper.current.contains(e.target)
-      && !menuContainer.current.contains(e.target)
-      && !activeModal.contains(e.target)) {
+      && !menuContainer.current.contains(e.target) && !typeof Swiper) {
       setIsClicked(false);
     }
   }, [isClicked]);
 
   useEffect(() => {
-    window.addEventListener('click', onClickOutsideHandler);
+    window.addEventListener('mousedown', onClickOutsideHandler);
     return () => {
-      window.removeEventListener('click', onClickOutsideHandler);
+      window.removeEventListener('mousedown', onClickOutsideHandler);
     };
   }, [onClickOutsideHandler]);
 

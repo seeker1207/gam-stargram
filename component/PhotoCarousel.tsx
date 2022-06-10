@@ -1,21 +1,41 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
-
 import React from 'react';
+import { Image } from 'semantic-ui-react';
+import { v4 as uuid } from 'uuid';
+import styled from 'styled-components';
 
-function PhotoCarousel(props) {
+const SwiperWrapper = styled.div`
+  .swiper-slide {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    height: auto;
+  }
+  img.ui.image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    max-height: 50vh;
+  }
+`;
+
+function PhotoCarousel({ filenames } : { filenames: string[] }) {
   return (
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}>
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-    </Swiper>
+    <SwiperWrapper>
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={1}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        { filenames && filenames.map((filename) => (
+          <SwiperSlide key={uuid()}>
+            <Image src={`http://localhost:3065/${filename}`} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </SwiperWrapper>
   );
 }
 
