@@ -1,0 +1,79 @@
+<changelist name="2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]" date="1654869912940" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="2022-06-10 오후 11:05, 업데이트 전에 커밋되지 않은 변경 내용 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/core-util-is-npm-1.0.3-ca74b76c90-9de8597363.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/core-util-is-npm-1.0.3-ca74b76c90-9de8597363.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/string_decoder-npm-1.1.1-e46a6c1353-9ab7e56f9d.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/string_decoder-npm-1.1.1-e46a6c1353-9ab7e56f9d.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/process-nextick-args-npm-2.0.1-b8d7971609-1d38588e52.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/process-nextick-args-npm-2.0.1-b8d7971609-1d38588e52.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/streamsearch-npm-1.1.0-fc3ad6536d-1cce16cea8.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/streamsearch-npm-1.1.0-fc3ad6536d-1cce16cea8.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/fs-npm-0.0.1-security-5060b47e87-53c6230e1f.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/fs-npm-0.0.1-security-5060b47e87-53c6230e1f.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/concat-stream-npm-1.6.2-2bee337060-1ef77032cb.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/concat-stream-npm-1.6.2-2bee337060-1ef77032cb.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/xtend-npm-4.0.2-7f2375736e-ac5dfa738b.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/xtend-npm-4.0.2-7f2375736e-ac5dfa738b.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/typedarray-npm-0.0.6-37638b2241-33b39f3d0e.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/typedarray-npm-0.0.6-37638b2241-33b39f3d0e.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/append-field-npm-1.0.0-bb98be199c-482ba08acc.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/append-field-npm-1.0.0-bb98be199c-482ba08acc.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/mkdirp-npm-0.5.6-dcd5a6b97b-0c91b721bb.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/mkdirp-npm-0.5.6-dcd5a6b97b-0c91b721bb.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/buffer-from-npm-1.1.2-03d2f20d7e-0448524a56.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/buffer-from-npm-1.1.2-03d2f20d7e-0448524a56.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/readable-stream-npm-2.3.7-77b22a9818-e4920cf754.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/readable-stream-npm-2.3.7-77b22a9818-e4920cf754.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/busboy-npm-1.6.0-ebb5cbb04b-32801e2c01.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/busboy-npm-1.6.0-ebb5cbb04b-32801e2c01.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/isarray-npm-1.0.0-db4f547720-f032df8e02.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/isarray-npm-1.0.0-db4f547720-f032df8e02.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="../gam-stargram-back/.yarn/cache/multer-npm-1.4.5-lts.1-2b83a2d180-d6dfa78a6e.zip" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/multer-npm-1.4.5-lts.1-2b83a2d180-d6dfa78a6e.zip" />
+  </binary>
+</changelist>
