@@ -4,4 +4,7 @@ function photoUpload(photoFormData) {
   return axios.post('/photo', photoFormData);
 }
 
-export { photoUpload };
+function postPost(postFormData : {description: string, filePath: string[]}) {
+  return axios.post('/post', postFormData);
+}
+export { photoUpload, postPost };

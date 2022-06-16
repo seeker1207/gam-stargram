@@ -1,9 +1,10 @@
 import React, { useCallback, useRef, useState } from 'react';
 import { Button, Form, Grid, Header, Icon, Menu, Modal, Segment, TextArea } from 'semantic-ui-react';
 import styled from 'styled-components';
-import { photoUpload } from '../api/postApi';
+import { photoUpload, postPost } from '../api/postApi';
 import PhotoCarousel from './PhotoCarousel';
 import Toast from './Toast';
+import useInput from '../hooks/useInput';
 
 const SegmentWrapper = styled(Segment)`
   min-height: 30rem !important;
@@ -18,6 +19,8 @@ function PostMyPhotoModal() {
   const [isUploaded, setIsUploaded] = useState(false);
   const [openToast, setOpenToast] = useState(false);
   const [uploadedPhotosFileNames, setUploadedPhotosFileNames] = useState(null);
+  const [description, handler] = useInput('');
+
   const imageInput = useRef(null);
 
   const uploadPhoto = async (photoFormData) => {
@@ -33,6 +36,7 @@ function PostMyPhotoModal() {
       alert(error.response.data.error);
     }
   };
+
   const onClickImages = useCallback(() => {
     imageInput.current.click();
   }, []);
@@ -49,8 +53,11 @@ function PostMyPhotoModal() {
     await uploadPhoto(photoFormData);
   }, []);
 
-  const onSubmitPost = () => {
-    console.log(3434);
+  const onSubmitPost = async () => {
+    const typedDesc = description as string;
+    await postPost({ description: typedDesc, filePath: uploadedPhotosFileNames });
+    setOpenToast(true);
+    setTimeout(() => setOpenToast(false), 3500);
   };
 
   const dropHandler = async (e) => {
@@ -105,7 +112,7 @@ function PostMyPhotoModal() {
             </Grid.Column>
             <Grid.Column width={6}>
               <Form onSubmit={onSubmitPost}>
-                <TextBoxWrapper required placeholder="어떤 게임 이야기인가요?" />
+                <TextBoxWrapper required placeholder="어떤 게임 이야기인가요?" onChange={handler} value={description} />
               </Form>
             </Grid.Column>
           </Grid.Row>
@@ -119,7 +126,7 @@ function PostMyPhotoModal() {
           content="내 앨범에 추가"
           labelPosition="right"
           icon="checkmark"
-          onClick={() => setOpen(false)}
+          onClick={onSubmitPost}
           color="violet"
           type="submit"
         />

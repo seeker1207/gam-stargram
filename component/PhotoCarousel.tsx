@@ -38,7 +38,7 @@ function PhotoCarousel({ filenames } : { filenames: string[] }) {
       >
         { filenames && filenames.map((filename) => (
           <SwiperSlide key={uuid()}>
-            <Image src={`http://localhost:3065/${filename}`} />
+            <Image src={`${process.env.NEXT_PUBLIC_BACK_HOST}${filename}`} />
           </SwiperSlide>
         ))}
       </Swiper>

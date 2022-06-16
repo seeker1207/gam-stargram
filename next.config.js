@@ -4,6 +4,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    domains: ['http://localhost:3065/'],
+  },
 };
 
 module.exports = nextConfig;

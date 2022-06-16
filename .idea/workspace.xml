@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="백: 게시글 올리는 API 구현, 프론트: 반응형 디자인 css 적용">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30__7_23_________Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/@types-cors-npm-2.8.12-ff52e8e514-8c45f112c7.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/@types-cors-npm-2.8.12-ff52e8e514-8c45f112c71.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/@types-morgan-npm-1.9.3-118eec1c2b-0b9bc8641c.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/asynckit-npm-0.4.0-c718858525-7b78c451df.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/axios-npm-0.27.2-dbe3a48aea-38cb754046.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/combined-stream-npm-1.0.8-dc14d4a63a-49fa4aeb49.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/delayed-stream-npm-1.0.0-c5a4c4cc02-46fe6e83e2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/follow-redirects-npm-1.15.1-6b191885cd-6aa4e3e3cd.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/form-data-npm-4.0.0-916facec2d-01135bf867.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/mime-db-npm-1.52.0-b5371d6fd2-0d99a03585.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/mime-types-npm-2.1.35-dd9ea9f3e2-89a5b7f1de.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-05-30_오후_7_23,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
+    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="첨부 이미지 목록 spiwer의 다음 ,이전 버튼 생성 및 구현">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/postApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/postApi.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/component/PhotoCarousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/PhotoCarousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/PostMyPhotoModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/PostMyPhotoModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../gam-stargram-back" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -127,7 +119,8 @@
       <workItem from="1654350473880" duration="601000" />
       <workItem from="1654424243484" duration="2156000" />
       <workItem from="1654479102011" duration="11979000" />
-      <workItem from="1655086488367" duration="2668000" />
+      <workItem from="1655086488367" duration="3391000" />
+      <workItem from="1655339212892" duration="6927000" />
     </task>
     <task id="LOCAL-00001" summary="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
       <created>1653036824027</created>
@@ -199,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654180850369</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="첨부 이미지 목록 spiwer의 다음 ,이전 버튼 생성 및 구현">
+      <created>1655099328939</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1655099328939</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +233,8 @@
     <MESSAGE value="프론트엔드 로그인기능 오류메세지 모달 구현" />
     <MESSAGE value="프론트엔드 로그인시 유저정보 틀릴경우 토스트 메세지 띄우는 로직 구현" />
     <MESSAGE value="백, 프론트 회원가입 로직 구현, 회원가입 완료시 토스트메세지 출력 로직 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="백, 프론트 회원가입 로직 구현, 회원가입 완료시 토스트메세지 출력 로직 구현" />
+    <MESSAGE value="첨부 이미지 목록 spiwer의 다음 ,이전 버튼 생성 및 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="첨부 이미지 목록 spiwer의 다음 ,이전 버튼 생성 및 구현" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
