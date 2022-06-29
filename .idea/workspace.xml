@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="첨부 이미지 목록 spiwer의 다음 ,이전 버튼 생성 및 구현">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10__11_05_________Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/append-field-npm-1.0.0-bb98be199c-482ba08acc.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/buffer-from-npm-1.1.2-03d2f20d7e-0448524a56.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/busboy-npm-1.6.0-ebb5cbb04b-32801e2c01.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/concat-stream-npm-1.6.2-2bee337060-1ef77032cb.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/core-util-is-npm-1.0.3-ca74b76c90-9de8597363.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/fs-npm-0.0.1-security-5060b47e87-53c6230e1f.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/isarray-npm-1.0.0-db4f547720-f032df8e02.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/mkdirp-npm-0.5.6-dcd5a6b97b-0c91b721bb.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/multer-npm-1.4.5-lts.1-2b83a2d180-d6dfa78a6e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/process-nextick-args-npm-2.0.1-b8d7971609-1d38588e52.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/readable-stream-npm-2.3.7-77b22a9818-e4920cf754.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/streamsearch-npm-1.1.0-fc3ad6536d-1cce16cea8.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/string_decoder-npm-1.1.1-e46a6c1353-9ab7e56f9d.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/typedarray-npm-0.0.6-37638b2241-33b39f3d0e.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/2022-06-10_오후_11_05,_업데이트_전에_커밋되지_않은_변경_내용_[Changes]/xtend-npm-4.0.2-7f2375736e-ac5dfa738b.zip" beforeDir="false" />
+    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="이미지 next/image 태그로 변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/LoginModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/component/PhotoZone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/PhotoZone.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/UserProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/UserProfile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/signUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/SignUpForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useInput.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/photo/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/photo/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +123,7 @@
       <workItem from="1655339212892" duration="6927000" />
       <workItem from="1655591026701" duration="1246000" />
       <workItem from="1656238191631" duration="472000" />
-      <workItem from="1656457581084" duration="6021000" />
+      <workItem from="1656457581084" duration="15437000" />
     </task>
     <task id="LOCAL-00001" summary="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
       <created>1653036824027</created>
@@ -216,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655099328939</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="이미지 next/image 태그로 변경">
+      <created>1656467014866</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1656467014866</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +244,8 @@
     <MESSAGE value="프론트엔드 로그인시 유저정보 틀릴경우 토스트 메세지 띄우는 로직 구현" />
     <MESSAGE value="백, 프론트 회원가입 로직 구현, 회원가입 완료시 토스트메세지 출력 로직 구현" />
     <MESSAGE value="첨부 이미지 목록 spiwer의 다음 ,이전 버튼 생성 및 구현" />
-    <option name="LAST_COMMIT_MESSAGE" value="첨부 이미지 목록 spiwer의 다음 ,이전 버튼 생성 및 구현" />
+    <MESSAGE value="이미지 next/image 태그로 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="이미지 next/image 태그로 변경" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -42,7 +42,7 @@ const ImageGridWrapper = styled.div`
     }
   }
   .ui.grid>.row {
-    height: 20vh;
+    padding: 0;
   }
 `;
 
