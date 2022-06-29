@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Header, Image, Placeholder, SemanticWIDTHSNUMBER } from 'semantic-ui-react';
+import { Grid, Header, Placeholder, SemanticWIDTHSNUMBER } from 'semantic-ui-react';
+import Image from 'next/image';
 import { v4 as uuid } from 'uuid';
 import styled from 'styled-components';
 
@@ -19,16 +20,23 @@ const PlaceholderWrapper = styled(Placeholder)`
   }
 `;
 
-const ImageWrapper = styled(Image)`
-  height: 100%;
-  object-fit: cover;
-`;
+// const ImageWrapper = styled(Image)`
+//   height: 100%;
+//   object-fit: cover;
+// `;
 
 function PhotoZone({ col, imgList, row, isLoading } : Props) {
   const getGridColumns = (rowImgList) => rowImgList
     .map((img : string) => (
-      <Grid.Column key={uuid()} style={{ padding: 0, background: '#d3badb', overflow: 'hidden', height: '110%' }}>
-        <ImageWrapper src={`http://localhost:3065/${img}`} />
+      <Grid.Column key={uuid()} style={{ padding: 0, background: '#d3badb', overflow: 'hidden', height: '100%' }}>
+        <Image
+          src={`http://localhost:3065/${img}`}
+          layout="responsive"
+          width={16}
+          height={9}
+          objectFit="cover"
+        />
+        {/* <ImageWrapper layout="fill" src={`http://localhost:3065/${img}`} /> */}
       </Grid.Column>
     ));
   const calculatedRow = row ?? (imgList.length / col) + 1;

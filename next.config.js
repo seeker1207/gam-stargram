@@ -5,7 +5,8 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ['http://localhost:3065/'],
+    domains: ['localhost'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
   },
 };
 
