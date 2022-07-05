@@ -19,6 +19,8 @@ function PostMyPhotoModal() {
   const [openToast, setOpenToast] = useState(false);
   const [uploadedPhotosFileNames, setUploadedPhotosFileNames] = useState(null);
   const imageInput = useRef(null);
+  const submitTriggerInput = useRef(null);
+  const uploadedFilename = useRef(null);
 
   const uploadPhoto = async (photoFormData) => {
     try {
@@ -46,19 +48,21 @@ function PostMyPhotoModal() {
       photoFormData.append('photo', f, encodeURI(f.name));
     });
     console.log(photoFormData);
-    await uploadPhoto(photoFormData);
+    uploadedFilename.current = await uploadPhoto(photoFormData);
   }, []);
 
   const onSubmitPost = () => {
     console.log(3434);
+    console.log(uploadedPhotosFileNames);
   };
 
   const dropHandler = async (e) => {
     e.preventDefault();
+    const { files } : {files: File[]} = e.dataTransfer;
 
-    if (e.dataTransfer.files) {
+    if (files) {
       const photoFormData = new FormData();
-      Array.from(e.dataTransfer.files).forEach((f) => {
+      Array.from(files).forEach((f) => {
         photoFormData.append('photo', f, encodeURI(f.name));
       });
 
@@ -105,7 +109,8 @@ function PostMyPhotoModal() {
             </Grid.Column>
             <Grid.Column width={6}>
               <Form onSubmit={onSubmitPost}>
-                <TextBoxWrapper required placeholder="어떤 게임 이야기인가요?" />
+                <TextBoxWrapper placeholder="어떤 게임 이야기인가요?" />
+                <input ref={submitTriggerInput} type="submit" hidden />
               </Form>
             </Grid.Column>
           </Grid.Row>
@@ -119,7 +124,9 @@ function PostMyPhotoModal() {
           content="내 앨범에 추가"
           labelPosition="right"
           icon="checkmark"
-          onClick={() => setOpen(false)}
+          onClick={() => {
+            submitTriggerInput.current.click();
+          }}
           color="violet"
           type="submit"
         />
