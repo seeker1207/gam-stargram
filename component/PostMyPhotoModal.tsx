@@ -1,9 +1,10 @@
 import React, { useCallback, useRef, useState } from 'react';
 import { Button, Form, Grid, Header, Icon, Menu, Modal, Segment, TextArea } from 'semantic-ui-react';
 import styled from 'styled-components';
-import { photoUpload } from '../api/postApi';
+import { photoUpload, postPost } from '../api/postApi';
 import PhotoCarousel from './PhotoCarousel';
 import Toast from './Toast';
+import useInput from '../hooks/useInput';
 
 const SegmentWrapper = styled(Segment)`
   min-height: 30rem !important;
@@ -18,9 +19,9 @@ function PostMyPhotoModal() {
   const [isUploaded, setIsUploaded] = useState(false);
   const [openToast, setOpenToast] = useState(false);
   const [uploadedPhotosFileNames, setUploadedPhotosFileNames] = useState(null);
+  const [description, handler] = useInput('');
+
   const imageInput = useRef(null);
-  const submitTriggerInput = useRef(null);
-  const uploadedFilename = useRef(null);
 
   const uploadPhoto = async (photoFormData) => {
     try {
@@ -35,6 +36,7 @@ function PostMyPhotoModal() {
       alert(error.response.data.error);
     }
   };
+
   const onClickImages = useCallback(() => {
     imageInput.current.click();
   }, []);
@@ -48,21 +50,22 @@ function PostMyPhotoModal() {
       photoFormData.append('photo', f, encodeURI(f.name));
     });
     console.log(photoFormData);
-    uploadedFilename.current = await uploadPhoto(photoFormData);
+    await uploadPhoto(photoFormData);
   }, []);
 
-  const onSubmitPost = () => {
-    console.log(3434);
-    console.log(uploadedPhotosFileNames);
+  const onSubmitPost = async () => {
+    const typedDesc = description as string;
+    await postPost({ description: typedDesc, filePath: uploadedPhotosFileNames });
+    setOpenToast(true);
+    setTimeout(() => setOpenToast(false), 3500);
   };
 
   const dropHandler = async (e) => {
     e.preventDefault();
-    const { files } : {files: File[]} = e.dataTransfer;
 
-    if (files) {
+    if (e.dataTransfer.files) {
       const photoFormData = new FormData();
-      Array.from(files).forEach((f) => {
+      Array.from(e.dataTransfer.files).forEach((f) => {
         photoFormData.append('photo', f, encodeURI(f.name));
       });
 
@@ -109,8 +112,7 @@ function PostMyPhotoModal() {
             </Grid.Column>
             <Grid.Column width={6}>
               <Form onSubmit={onSubmitPost}>
-                <TextBoxWrapper placeholder="어떤 게임 이야기인가요?" />
-                <input ref={submitTriggerInput} type="submit" hidden />
+                <TextBoxWrapper required placeholder="어떤 게임 이야기인가요?" onChange={handler} value={description} />
               </Form>
             </Grid.Column>
           </Grid.Row>
@@ -124,9 +126,7 @@ function PostMyPhotoModal() {
           content="내 앨범에 추가"
           labelPosition="right"
           icon="checkmark"
-          onClick={() => {
-            submitTriggerInput.current.click();
-          }}
+          onClick={onSubmitPost}
           color="violet"
           type="submit"
         />

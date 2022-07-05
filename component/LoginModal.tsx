@@ -4,7 +4,7 @@ import { Modal, Image, Button, Form, Menu, Label, Rail, Segment, SemanticCOLORS 
 import styled from 'styled-components';
 import { login, signUp } from '../api/userApi';
 import useInput from '../hooks/useInput';
-import SignUpForm from './signUpForm';
+import SignUpForm from './SignUpForm';
 import { User } from '../types/userTypes';
 
 const LoginButtonWrapper = styled.div`
@@ -75,6 +75,8 @@ function LoginModal() {
   const toastTimeoutHandler = useRef(null);
 
   const handleItemClick = (e, { name }) => setActiveItem(name);
+
+  const submitHiddenButton = useRef(null);
 
   const onLogin = useCallback(async () => {
     if (toastTimeoutHandler.current) {
@@ -164,7 +166,7 @@ function LoginModal() {
               회원가입
             </Menu.Item>
           </Menu>
-          <Form>
+          <Form onSubmit={activeItem === 'login' ? onLogin : onSignUp}>
             {activeItem === 'login'
               && (
               <FormFiledWrapper ref={inputWrapper}>
@@ -178,15 +180,17 @@ function LoginModal() {
                   value={email}
                   onChange={onChangeEmail}
                   onKeyDown={onEnterKeyPressEventHandler}
+                  required
                 />
                 <Form.Field>
                   <label htmlFor="password">비밀번호</label>
-                  <input name="password" value={password} onChange={onChangePassword} type="password" placeholder="Password" onKeyDown={onEnterKeyPressEventHandler} />
+                  <input name="password" value={password as string} onChange={onChangePassword} type="password" placeholder="Password" onKeyDown={onEnterKeyPressEventHandler} required />
                 </Form.Field>
               </FormFiledWrapper>
               )}
             {activeItem === 'signUp'
               && <SignUpForm setSignUpInfo={setSignUpInfo} />}
+            <button ref={submitHiddenButton} type="submit" hidden />
           </Form>
         </Modal.Description>
       </Modal.Content>
@@ -197,7 +201,7 @@ function LoginModal() {
             content={activeItem === 'login' ? '로그인' : '회원가입'}
             labelPosition="right"
             icon="checkmark"
-            onClick={activeItem === 'login' ? onLogin : onSignUp}
+            onClick={() => submitHiddenButton.current.click()}
             loading={loginLoading}
             disabled={loginLoading}
             positive

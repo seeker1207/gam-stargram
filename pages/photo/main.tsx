@@ -41,6 +41,9 @@ const ImageGridWrapper = styled.div`
       margin-top: 13%;
     }
   }
+  .ui.grid>.row {
+    padding: 0;
+  }
 `;
 
 function Main() {

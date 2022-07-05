@@ -42,7 +42,7 @@ function UserProfile() {
       <div ref={iconDivWrapper}>
         <IconWrapper
           link
-          color="gray"
+          color="grey"
           name="user circle"
           size="huge"
           onClick={() => setIsClicked((prevState) => !prevState)}

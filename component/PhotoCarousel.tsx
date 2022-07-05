@@ -1,5 +1,9 @@
+import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/css';
+import 'swiper/css/navigation';
+
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 import { v4 as uuid } from 'uuid';
@@ -24,14 +28,17 @@ function PhotoCarousel({ filenames } : { filenames: string[] }) {
   return (
     <SwiperWrapper>
       <Swiper
+        modules={[Navigation]}
         spaceBetween={20}
         slidesPerView={1}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
+        grabCursor
+        navigation
       >
         { filenames && filenames.map((filename) => (
           <SwiperSlide key={uuid()}>
-            <Image src={`http://localhost:3065/${filename}`} />
+            <Image src={`${process.env.NEXT_PUBLIC_BACK_HOST}${filename}`} />
           </SwiperSlide>
         ))}
       </Swiper>
