@@ -1,6 +1,14 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { ChangeEventHandler, useCallback, useRef, useState } from 'react';
 import { useSWRConfig } from 'swr';
-import { Modal, Image, Button, Form, Menu, Label, Rail, Segment, SemanticCOLORS } from 'semantic-ui-react';
+import {
+  Modal,
+  Image,
+  Button,
+  Form,
+  Menu,
+  Rail,
+  Segment,
+} from 'semantic-ui-react';
 import styled from 'styled-components';
 import { login, signUp } from '../api/userApi';
 import useInput from '../hooks/useInput';
@@ -85,7 +93,7 @@ function LoginModal() {
     if (isValidEmail(email)) {
       setLoginLoading(true);
       try {
-        await mutate('/user/login', await login({ email, password }), false);
+        await mutate('/user/login', await login({ email, password } as {email: string, password: string}), false);
       } catch (error) {
         setToastColor('red');
         setToastMsg(error.response.data.error);
@@ -178,13 +186,13 @@ function LoginModal() {
                   placeholder="이메일"
                   name="email"
                   value={email}
-                  onChange={onChangeEmail}
+                  onChange={onChangeEmail as ChangeEventHandler<HTMLInputElement>}
                   onKeyDown={onEnterKeyPressEventHandler}
                   required
                 />
                 <Form.Field>
                   <label htmlFor="password">비밀번호</label>
-                  <input name="password" value={password as string} onChange={onChangePassword} type="password" placeholder="Password" onKeyDown={onEnterKeyPressEventHandler} required />
+                  <input name="password" value={password as string} onChange={onChangePassword as ChangeEventHandler<HTMLInputElement>} type="password" placeholder="Password" onKeyDown={onEnterKeyPressEventHandler} required />
                 </Form.Field>
               </FormFiledWrapper>
               )}
