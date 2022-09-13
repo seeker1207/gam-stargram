@@ -8,6 +8,7 @@ const UserMenuWrapper = styled.div`
   position: absolute;
   right: 1.0em;
   top: 4em;
+  z-index: 3;
 `;
 
 const IconWrapper = styled(Icon)`
@@ -21,11 +22,11 @@ function UserProfile() {
   const onClickOutsideHandler = useCallback((e) => {
     const activeModal = document.querySelector('.modal.visible.active');
     console.log(e.target);
-    if (activeModal && !activeModal.contains(e.target)) {
-      setIsClicked(false);
+    if (activeModal) {
+      return;
     }
     if (isClicked && !iconDivWrapper.current.contains(e.target)
-      && !menuContainer.current.contains(e.target) && !typeof Swiper) {
+      && !menuContainer.current.contains(e.target)) {
       setIsClicked(false);
     }
   }, [isClicked]);

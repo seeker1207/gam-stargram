@@ -3,14 +3,14 @@ import { Button, Grid, GridRow, Icon, Image, Input, Menu, Rail, Sidebar } from '
 import styled from 'styled-components';
 import Link from 'next/link';
 import LoginModal from './LoginModal';
-import useUser from '../hooks/useUser';
 import useLoginUser from '../hooks/useUser';
 import UserProfile from './UserProfile';
 
 const LayoutWrapper = styled.div`
-  margin: 0 auto;
+  margin: 0 auto!important;
   max-width: 2000px;
 `;
+
 const ImageWrapper = styled.div`
   @media all and (max-width:1250px) {
     display: none;
@@ -22,7 +22,7 @@ const ImageWrapper = styled.div`
 `;
 const MenuWrapper = styled.div`
   cursor: pointer;
-  
+
   span {
     margin-left: 5px;
     color: #6435c9;
@@ -32,9 +32,10 @@ const MenuWrapper = styled.div`
 `;
 
 const MenuGridWrapper = styled(GridRow)`
+  margin-top: 2em;
   .row:first-of-type {
     position: fixed;
-    z-index: 3;
+    z-index: 10;
     background: white;
     margin: 0 auto;
     max-width: 2000px;
@@ -58,6 +59,13 @@ const SearchBarWrapper = styled.div`
   align-items: center;
 `;
 
+const GridColumnWrapper = styled(Grid.Column)`
+  margin: 0 4% !important;
+  padding: 0 !important;
+  @media all and (max-width: 800px) {
+    max-width: 98%;
+  }
+`;
 export default function Layout({ children } : {children : ReactElement}) {
   const [visible, setVisible] = useState(false);
   const { isLoggedOut } = useLoginUser();
@@ -65,83 +73,76 @@ export default function Layout({ children } : {children : ReactElement}) {
     <LayoutWrapper>
       <MenuGridWrapper>
         <Grid>
-          <GridRow>
-            <Grid.Column width={3} />
-            <Grid.Column width={10}>
-              <Menu secondary>
-                <Menu.Menu position="left">
+          <GridColumnWrapper width={16}>
+            <Menu secondary>
+              <Menu.Menu position="left">
+                <Menu.Item>
+                  <MenuWrapper onClick={() => setVisible((prev) => !prev)}>
+                    <Icon link circular inverted color="violet" name="align justify" size="large" />
+                    <span>Menu</span>
+                  </MenuWrapper>
+                </Menu.Item>
+                <ImageWrapper>
                   <Menu.Item>
-                    <MenuWrapper onClick={() => setVisible((prev) => !prev)}>
-                      <Icon link circular inverted color="violet" name="align justify" size="large" />
-                      <span>Menu</span>
-                    </MenuWrapper>
+                    <Link href="/" passHref>
+                      <Image src="/gamstar_logo.PNG" size="small" />
+                    </Link>
                   </Menu.Item>
-                  <ImageWrapper>
-                    <Menu.Item>
-                      <Link href="/" passHref>
-                        <Image src="/gamstar_logo.PNG" size="small" />
-                      </Link>
-                    </Menu.Item>
-                  </ImageWrapper>
-                </Menu.Menu>
-                <Menu.Menu position="right">
-                  <SearchBarWrapper>
-                    <Menu.Item>
-                      <Input icon="search" placeholder="게임을 검색해보세요..." />
-                    </Menu.Item>
-                  </SearchBarWrapper>
-                  <LoginMenuWrapper>
-                    <Menu.Item>
-                      {isLoggedOut ? <LoginModal /> : <UserProfile />}
+                </ImageWrapper>
+              </Menu.Menu>
+              <Menu.Menu position="right">
+                <SearchBarWrapper>
+                  <Menu.Item>
+                    <Input icon="search" placeholder="게임을 검색해보세요..." />
+                  </Menu.Item>
+                </SearchBarWrapper>
+                <LoginMenuWrapper>
+                  <Menu.Item>
+                    {isLoggedOut ? <LoginModal /> : <UserProfile />}
 
-                    </Menu.Item>
-                  </LoginMenuWrapper>
-                </Menu.Menu>
-              </Menu>
-            </Grid.Column>
-            <Grid.Column width={3} />
-          </GridRow>
+                  </Menu.Item>
+                </LoginMenuWrapper>
+              </Menu.Menu>
+            </Menu>
+          </GridColumnWrapper>
         </Grid>
       </MenuGridWrapper>
 
       <Grid>
-        <Grid.Row divided>
-          <Grid.Column width={3} />
-          <Grid.Column width={10}>
-            <Sidebar.Pushable style={{ transform: 'none' }}>
-              <Sidebar
-                as={Menu}
-                animation="overlay"
-                icon="labeled"
-                inverted
-                onHide={() => setVisible(false)}
-                vertical
-                visible={visible}
-                style={{ position: 'fixed', width: '15em' }}
-                color="violet"
-              >
-                <Menu.Item color="purple" as="a">
-                  <Icon name="home" />
-                  Home
-                </Menu.Item>
-                <Menu.Item as="a">
-                  <Icon name="gamepad" />
-                  Games
-                </Menu.Item>
-                <Menu.Item as="a">
-                  <Icon name="camera" />
-                  Channels
-                </Menu.Item>
 
-              </Sidebar>
+        <GridColumnWrapper width={16}>
+          <Sidebar.Pushable style={{ transform: 'none' }}>
+            <Sidebar
+              as={Menu}
+              animation="overlay"
+              icon="labeled"
+              inverted
+              onHide={() => setVisible(false)}
+              vertical
+              visible={visible}
+              style={{ position: 'fixed', width: '15em' }}
+              color="violet"
+            >
+              <Menu.Item color="purple" as="a">
+                <Icon name="home" />
+                Home
+              </Menu.Item>
+              <Menu.Item as="a">
+                <Icon name="gamepad" />
+                Games
+              </Menu.Item>
+              <Menu.Item as="a">
+                <Icon name="camera" />
+                Channels
+              </Menu.Item>
 
-              <Sidebar.Pusher>
-                {children}
-              </Sidebar.Pusher>
-            </Sidebar.Pushable>
-          </Grid.Column>
-          <Grid.Column width={3} />
-        </Grid.Row>
+            </Sidebar>
+
+            <Sidebar.Pusher>
+              {children}
+            </Sidebar.Pusher>
+          </Sidebar.Pushable>
+        </GridColumnWrapper>
       </Grid>
     </LayoutWrapper>
   );

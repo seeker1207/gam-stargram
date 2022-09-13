@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="이미지 next/image 태그로 변경">
+    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="게임 이미지 dimmer 효과 추가">
+      <change afterPath="$PROJECT_DIR$/component/PostModal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/LoginModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/component/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/component/PhotoZone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/PhotoZone.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/component/UserProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/UserProfile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/signUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/SignUpForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/photo/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/photo/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +121,17 @@
       <workItem from="1655339212892" duration="6927000" />
       <workItem from="1655591026701" duration="1246000" />
       <workItem from="1656238191631" duration="472000" />
-      <workItem from="1656457581084" duration="15437000" />
+      <workItem from="1656457581084" duration="15737000" />
+      <workItem from="1657673626790" duration="553000" />
+      <workItem from="1662034753979" duration="593000" />
+      <workItem from="1662172961223" duration="231000" />
+      <workItem from="1662173207479" duration="46000" />
+      <workItem from="1662173306216" duration="303000" />
+      <workItem from="1662173620895" duration="596000" />
+      <workItem from="1662261510042" duration="23000" />
+      <workItem from="1662264252237" duration="4915000" />
+      <workItem from="1662712141169" duration="595000" />
+      <workItem from="1663032306363" duration="10548000" />
     </task>
     <task id="LOCAL-00001" summary="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
       <created>1653036824027</created>
@@ -209,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656467014866</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="게임 이미지 dimmer 효과 추가">
+      <created>1656492147600</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1656492147600</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +260,8 @@
     <MESSAGE value="백, 프론트 회원가입 로직 구현, 회원가입 완료시 토스트메세지 출력 로직 구현" />
     <MESSAGE value="첨부 이미지 목록 spiwer의 다음 ,이전 버튼 생성 및 구현" />
     <MESSAGE value="이미지 next/image 태그로 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="이미지 next/image 태그로 변경" />
+    <MESSAGE value="게임 이미지 dimmer 효과 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="게임 이미지 dimmer 효과 추가" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
