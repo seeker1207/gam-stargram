@@ -65,7 +65,7 @@ function PostMyPhotoModal() {
 
     if (e.dataTransfer.files) {
       const photoFormData = new FormData();
-      Array.from(e.dataTransfer.files).forEach((f) => {
+      Array.from(e.dataTransfer.files).forEach((f: File) => {
         photoFormData.append('photo', f, encodeURI(f.name));
       });
 

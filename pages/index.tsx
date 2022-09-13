@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
 import { Header, Icon } from 'semantic-ui-react';
 import styled from 'styled-components';
 import Link from 'next/link';

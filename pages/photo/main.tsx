@@ -65,7 +65,10 @@ function Main() {
           <PhotoZone
             col={3}
             row={2}
-            imgList={!lolImgLoading ? lolHashtag.posts.map((post) => post.photos[0].filePath) : null}
+            imgList={
+            !lolImgLoading
+              ? lolHashtag.posts.map((post) => post.photos[0].filePath) : null
+}
             isLoading={lolImgLoading}
           />
         </ImageGridWrapper>
@@ -73,7 +76,10 @@ function Main() {
           <PhotoZone
             col={3}
             row={2}
-            imgList={!lolImgLoading ? lolHashtag.posts.map((post) => post.photos[0].filePath) : null}
+            imgList={
+            !lolImgLoading
+              ? lolHashtag.posts.map((post) => post.photos[0].filePath) : null
+}
             isLoading={lolImgLoading}
           />
         </ImageGridWrapper>
