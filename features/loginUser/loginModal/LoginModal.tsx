@@ -2,61 +2,17 @@ import React, { ChangeEventHandler, useCallback, useRef, useState } from 'react'
 import { useSWRConfig } from 'swr';
 import {
   Modal,
-  Image,
   Button,
   Form,
   Menu,
-  Rail,
   Segment,
 } from 'semantic-ui-react';
-import styled from 'styled-components';
-import { login, signUp } from '../../api/userApi';
-import useInput from '../../hooks/useInput';
-import SignUpForm from './SignUpForm';
-import { User } from '../../types/userTypes';
+import { login, signUp } from '../../../api/userApi';
+import SignUpForm from './submitForm/SignUpForm';
+import { User } from '../../../types/userTypes';
+import { LoginButtonWrapper, FormFiledWrapper, ToastMsg } from './LoginModal.styles';
+import LoginModalHeader from './LoginModalHeader';
 
-const LoginButtonWrapper = styled.div`
-  display: inline-block;
-  .ui.button {
-    background-color: #5829bb
-  }
-`;
-
-const FormFiledWrapper = styled.div`
-  input:focus {
-    border-color: #5829BBFF !important;
-  }
-`;
-
-const ToastMsg = styled(Rail)`
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  
-  .segment {
-    position: relative;
-    opacity: 0;
-    bottom: 2em;
-    animation: 3.5s linear alternate showToast;
-    
-    @keyframes showToast {
-      5% {
-        opacity: 1;
-        bottom: 0;
-      }
-      
-      95% {
-          opacity: 1;
-          bottom: 0;
-      }
-      
-      100% {
-        opacity: 0;
-        bottom: 2em;
-      }
-    }
-  }
-`;
 function isValidEmail(inputText) {
   if (!inputText) return false;
   const mailFormat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/;
@@ -65,12 +21,10 @@ function isValidEmail(inputText) {
 
 function LoginModal() {
   const [open, setOpen] = useState(false);
-  // const [secondOpen, setSecondOpen] = useState(false);
   const [toastAlert, setToastAlert] = useState(false);
   const [loginLoading, setLoginLoading] = useState(false);
   const [activeItem, setActiveItem] = useState('login');
-  const [email, onChangeEmail] = useInput('');
-  const [password, onChangePassword] = useInput('');
+
   const [emailCheck, setEmailCheck] = useState(false);
   const [toastMsg, setToastMsg] = useState('');
   const [toastColor, setToastColor] : [toastColor: 'red' | 'green', setToastColor: any] = useState('red');
@@ -85,29 +39,6 @@ function LoginModal() {
   const handleItemClick = (e, { name }) => setActiveItem(name);
 
   const submitHiddenButton = useRef(null);
-
-  const onLogin = useCallback(async () => {
-    if (toastTimeoutHandler.current) {
-      clearTimeout(toastTimeoutHandler.current);
-    }
-    if (isValidEmail(email)) {
-      setLoginLoading(true);
-      try {
-        await mutate('/user/loginUser', await login({ email, password } as {email: string, password: string}), false);
-      } catch (error) {
-        setToastColor('red');
-        setToastMsg(error.response.data.error);
-        setLoginLoading(false);
-        setToastAlert(true);
-        toastTimeoutHandler.current = setTimeout(() => {
-          setToastAlert(false);
-        }, 3500);
-      }
-    } else {
-      setEmailCheck(true);
-      setLoginLoading(false);
-    }
-  }, [email, password, mutate]);
 
   const onSignUp = useCallback(async () => {
     try {
@@ -129,12 +60,6 @@ function LoginModal() {
     }
   }, [signUpInfo]);
 
-  const onEnterKeyPressEventHandler = useCallback(async (e) => {
-    if (e.code === 'Enter') {
-      await onLogin();
-    }
-  }, [onLogin]);
-
   return (
     <Modal
       onClose={() => setOpen(false)}
@@ -144,12 +69,7 @@ function LoginModal() {
       size="tiny"
       style={loginLoading ? { cursor: 'not-allowed' } : {}}
     >
-      <Modal.Header style={{ color: '#5829bb' }}>
-        <Image src="/gamstar_logo.PNG" size="small" style={{ display: 'inline-block' }} />
-        <div style={{ display: 'inline-block', position: 'relative', top: '0.1em' }}>
-          {activeItem === 'login' ? '에 로그인' : '에 가입하세요'}
-        </div>
-      </Modal.Header>
+      <LoginModalHeader activeItem={activeItem} />
       <Modal.Content>
         { toastAlert && (
         <ToastMsg size="huge" internal position="left">
