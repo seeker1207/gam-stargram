@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="게임 이미지 dimmer 효과 추가">
-      <change afterPath="$PROJECT_DIR$/component/PostModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/controller/HashtagController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/controller/HashtagController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/LoginModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/LoginModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/PhotoZone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/PhotoZone.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/UserProfile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/UserProfile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/signUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/SignUpForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/photo/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/photo/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/loginUser/loginModal/LoginModalContents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/loginUser/loginModal/LoginModalContents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/loginUser/loginModal/submitForm/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/loginUser/loginModal/submitForm/LoginForm.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +120,17 @@
       <workItem from="1655339212892" duration="6927000" />
       <workItem from="1655591026701" duration="1246000" />
       <workItem from="1656238191631" duration="472000" />
-      <workItem from="1656457581084" duration="15437000" />
+      <workItem from="1656457581084" duration="15737000" />
+      <workItem from="1657673626790" duration="553000" />
+      <workItem from="1662034753979" duration="593000" />
+      <workItem from="1662172961223" duration="231000" />
+      <workItem from="1662173207479" duration="46000" />
+      <workItem from="1662173306216" duration="303000" />
+      <workItem from="1662173620895" duration="596000" />
+      <workItem from="1662261510042" duration="23000" />
+      <workItem from="1662264252237" duration="4915000" />
+      <workItem from="1662712141169" duration="595000" />
+      <workItem from="1663032306363" duration="10548000" />
     </task>
     <task id="LOCAL-00001" summary="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
       <created>1653036824027</created>

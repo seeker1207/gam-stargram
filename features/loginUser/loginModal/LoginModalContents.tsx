@@ -4,6 +4,7 @@ import { mutate } from 'swr';
 import { FormFiledWrapper, ToastMsg } from './LoginModal.styles';
 import SignUpForm from './submitForm/SignUpForm';
 import { login, signUp } from '../../../api/userApi';
+import LoginForm from './submitForm/LoginForm';
 
 interface Props{
   activeItem: string;
@@ -65,7 +66,6 @@ function LoginModalContents({ activeItem, onClickModalMenuHandler, setLoginLoadi
           >
             로그인
           </Menu.Item>
-
           <Menu.Item
             name="signUp"
             active={activeItem === 'signUp'}
@@ -74,39 +74,15 @@ function LoginModalContents({ activeItem, onClickModalMenuHandler, setLoginLoadi
             회원가입
           </Menu.Item>
         </Menu>
-        <Form onSubmit={activeItem === 'login' ? onLogin : onSignUp}>
-          {activeItem === 'login'
-            && (
-              <FormFiledWrapper ref={inputWrapper}>
-                <Form.Input
-                  error={emailCheck && { content: '이메일 형식이 잘못되었습니다.', pointing: 'below' }}
-                  fluid
-                  type="email"
-                  label="이메일"
-                  placeholder="이메일"
-                  name="email"
-                  value={email}
-                  onChange={onChangeEmail}
-                  onKeyDown={onEnterKeyPressEventHandler}
-                  required
-                />
-                <Form.Field>
-                  <label htmlFor="password">비밀번호</label>
-                  <input
-                    name="password"
-                    value={password}
-                    onChange={onChangePassword}
-                    type="password"
-                    placeholder="Password"
-                    onKeyDown={onEnterKeyPressEventHandler}
-                    required
-                  />
-                </Form.Field>
-              </FormFiledWrapper>
-            )}
-          {activeItem === 'signUp'
-            && <SignUpForm setSignUpInfo={setSignUpInfo} />}
-          <button ref={submitHiddenButton} type="submit" hidden />
+        {activeItem === 'login' ?
+          <LoginForm
+            loginErrorHandler={loginErrorHandler}
+            setLoginLoading={setLoginLoading}
+            setToastAlert={setToastAlert}
+            onEnterKeyPressEventHandler={onEnterKeyPressEventHandler} />
+          : <SignUpForm setSignUpInfo={} />
+        }
+        <button ref={submitHiddenButton} type="submit" hidden />
         </Form>
       </Modal.Description>
     </Modal.Content>
