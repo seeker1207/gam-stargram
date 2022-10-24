@@ -1,5 +1,4 @@
 import React, {
-  ChangeEventHandler,
   useEffect,
 } from 'react';
 import styled from 'styled-components';
@@ -39,17 +38,17 @@ function SignUpForm({ setSignUpInfo } :
 
   return (
     <FormFiledWrapper>
-      <Form.Input required fluid type="email" label="이메일" placeholder="이메일" onChange={onChangeEmail as ChangeEventHandler<HTMLInputElement>} value={email} />
-      <Form.Input required fluid type="password" label="비밀번호" placeholder="비밀번호" onChange={onChangePassword as ChangeEventHandler<HTMLInputElement>} value={password} />
+      <Form.Input required fluid type="email" label="이메일" placeholder="이메일" onChange={onChangeEmail} value={email} />
+      <Form.Input required fluid type="password" label="비밀번호" placeholder="비밀번호" onChange={onChangePassword} value={password} />
       <Form.Input required fluid type="password" label="비밀번호 확인" placeholder="비밀번호 확인" />
-      <Form.Input required fluid type="text" label="닉네임" placeholder="닉네임" onChange={onChangeNickname as ChangeEventHandler<HTMLInputElement>} value={nickname} />
+      <Form.Input required fluid type="text" label="닉네임" placeholder="닉네임" onChange={onChangeNickname} value={nickname} />
       <LabelWrapper>생년월일</LabelWrapper>
       <Form.Group widths="equal">
-        <Form.Input required fluid placeholder="년" onChange={onChangeBirthdayYear as ChangeEventHandler<HTMLInputElement>} value={birthdayYear} />
-        <Form.Field required fluid control="select" onChange={onChangeBirthdayMonth as ChangeEventHandler<HTMLInputElement>} value={birthdayMonth}>
+        <Form.Input required fluid placeholder="년" onChange={onChangeBirthdayYear} value={birthdayYear} />
+        <Form.Field required fluid control="select" onChange={onChangeBirthdayMonth} value={birthdayMonth}>
           {Array(12).fill(null).map((_, idx) => <option value={idx + 1}>{idx + 1}월</option>)}
         </Form.Field>
-        <Form.Input required fluid placeholder="일" onChange={onChangeBirthdayDay as ChangeEventHandler<HTMLInputElement>} value={birthdayDay} />
+        <Form.Input required fluid placeholder="일" onChange={onChangeBirthdayDay} value={birthdayDay} />
       </Form.Group>
     </FormFiledWrapper>
   );

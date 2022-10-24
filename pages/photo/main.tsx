@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Header } from 'semantic-ui-react';
 import PhotoZone from '../../component/PhotoZone';
-import Layout from '../../component/Layout';
+import Layout from '../../component/layout/Layout';
 import useHashtag from '../../hooks/useHashtag';
 
 const HeaderWrapper = styled.div`

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Header, Icon } from 'semantic-ui-react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import Layout from '../component/Layout';
+import Layout from '../component/layout/Layout';
 
 const MainHeaderWrapper = styled.div`
   margin-top: 17%;

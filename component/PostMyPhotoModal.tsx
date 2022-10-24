@@ -18,7 +18,7 @@ function PostMyPhotoModal() {
   const [open, setOpen] = useState(false);
   const [isUploaded, setIsUploaded] = useState(false);
   const [openToast, setOpenToast] = useState(false);
-  const [uploadedPhotosFileNames, setUploadedPhotosFileNames] = useState(null);
+  const [uploadedPhotosFileNames, setUploadedPhotosFileNames] = useState<String | null>(null);
   const [description, handler] = useInput('');
 
   const imageInput = useRef(null);
