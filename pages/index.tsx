@@ -51,7 +51,7 @@ export default function Home() {
           동료들에게 자랑 해보세요.
         </Header>
         <Header textAlign="center">
-          <Link href="/photo/main" passHref>
+          <Link href="/pages/photo/main" passHref>
             <Header.Content>
               <StartTextWrapper>
                 <h2>시작하기 </h2>

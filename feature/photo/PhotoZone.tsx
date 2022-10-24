@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Placeholder, SemanticWIDTHSNUMBER } from 'semantic-ui-react';
 import { v4 as uuid } from 'uuid';
 import styled from 'styled-components';
-import PostModal from './PostModal';
+import PostModal from '../post/PostModal';
 
 interface Props {
   col: SemanticWIDTHSNUMBER;

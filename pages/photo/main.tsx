@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Header } from 'semantic-ui-react';
-import PhotoZone from '../../component/PhotoZone';
+import PhotoZone from '../../feature/photo/PhotoZone';
 import Layout from '../../component/layout/Layout';
 import useHashtag from '../../hooks/useHashtag';
 

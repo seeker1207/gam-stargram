@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import styled from 'styled-components';
 import { Form } from 'semantic-ui-react';
-import useInput from '../hooks/useInput';
+import useInput from '../../hooks/useInput';
 
 const FormFiledWrapper = styled.div`
   input:focus {

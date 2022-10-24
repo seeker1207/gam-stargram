@@ -10,10 +10,10 @@ import {
   Segment,
 } from 'semantic-ui-react';
 import styled from 'styled-components';
-import { login, signUp } from '../api/userApi';
-import useInput from '../hooks/useInput';
+import { login, signUp } from '../../api/userApi';
+import useInput from '../../hooks/useInput';
 import SignUpForm from './SignUpForm';
-import { User } from '../types/userTypes';
+import { User } from '../../types/userTypes';
 
 const LoginButtonWrapper = styled.div`
   display: inline-block;
@@ -93,7 +93,7 @@ function LoginModal() {
     if (isValidEmail(email)) {
       setLoginLoading(true);
       try {
-        await mutate('/user/login', await login({ email, password } as {email: string, password: string}), false);
+        await mutate('/user/loginUser', await login({ email, password } as {email: string, password: string}), false);
       } catch (error) {
         setToastColor('red');
         setToastMsg(error.response.data.error);
@@ -119,7 +119,7 @@ function LoginModal() {
       setTimeout(async () => {
         setToastAlert(false);
         await mutate(
-          '/user/login',
+          '/user/loginUser',
           await login({ email: signUpInfo.email, password: signUpInfo.password }),
           false,
         );

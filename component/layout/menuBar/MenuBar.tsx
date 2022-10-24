@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Icon, Image, Input, Menu } from 'semantic-ui-react';
 import Link from 'next/link';
 import { MenuWrapper, LoginMenuWrapper, SearchBarWrapper, LogoWrapper } from './MenuBar.styles';
-import LoginModal from '../../LoginModal';
-import UserProfile from '../../UserProfile';
+import LoginModal from '../../../feature/loginUser/LoginModal';
+import UserProfile from '../../../feature/loginUser/UserProfile';
 
 function MenuBar({ isLoggedOut } : { isLoggedOut: boolean }) {
   const [, setVisible] = useState(false);

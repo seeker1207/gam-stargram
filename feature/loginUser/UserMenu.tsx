@@ -1,8 +1,8 @@
-import React, { useCallback, useState } from 'react';
-import { Input, Label, Menu } from 'semantic-ui-react';
+import React, { useCallback } from 'react';
+import { Label, Menu } from 'semantic-ui-react';
 import { mutate } from 'swr';
-import { logout } from '../api/userApi';
-import PostMyPhotoModal from './PostMyPhotoModal';
+import { logout } from '../../api/userApi';
+import PostMyPhotoModal from '../post/PostMyPhotoModal';
 
 function UserMenu() {
   const handleItemClick = useCallback(() => {
@@ -11,7 +11,7 @@ function UserMenu() {
 
   const onLogoutButtonClick = useCallback(async () => {
     await logout();
-    await mutate('/user/login');
+    await mutate('/user/loginUser');
   }, []);
 
   return (

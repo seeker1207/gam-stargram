@@ -1,10 +1,10 @@
 import React, { useCallback, useRef, useState } from 'react';
 import { Button, Form, Grid, Header, Icon, Menu, Modal, Segment, TextArea } from 'semantic-ui-react';
 import styled from 'styled-components';
-import { photoUpload, postPost } from '../api/postApi';
-import PhotoCarousel from './PhotoCarousel';
-import Toast from './Toast';
-import useInput from '../hooks/useInput';
+import { photoUpload, postPost } from '../../api/postApi';
+import PhotoCarousel from '../photo/PhotoCarousel';
+import Toast from '../../component/UI/Toast';
+import useInput from '../../hooks/useInput';
 
 const SegmentWrapper = styled(Segment)`
   min-height: 30rem !important;
