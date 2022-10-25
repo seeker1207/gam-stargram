@@ -1,17 +1,20 @@
-import React, { Dispatch, KeyboardEventHandler, SetStateAction, useCallback, useRef, useState } from 'react';
+import React, { Dispatch, SetStateAction, useCallback, useRef, useState } from 'react';
 import { Form } from 'semantic-ui-react';
 import { mutate } from 'swr';
 import { FormFiledWrapper } from '../LoginModal.styles';
 import { login } from '../../../../api/userApi';
 import useInput from '../../../../hooks/useInput';
-
-const TOAST_ERROR_ALERT_TIME = 3500;
+import {
+  CallToastFunc,
+  ClearToastTimeoutFunc,
+  HideToastFunc,
+} from '../../../../hooks/useToast';
 
 interface props {
-  loginErrorHandler: Function;
   setLoginLoading: Dispatch<SetStateAction<boolean>>;
-  setToastAlert: Dispatch<SetStateAction<boolean>>
-  onEnterKeyPressEventHandler: KeyboardEventHandler
+  callToastMsg: CallToastFunc
+  hideToastMsg: HideToastFunc
+  clearToastTimeout: ClearToastTimeoutFunc
 }
 
 function isValidEmail(inputText) {
@@ -20,26 +23,16 @@ function isValidEmail(inputText) {
   return inputText.match(mailFormat);
 }
 
-function LoginForm(
-  { loginErrorHandler, setLoginLoading, setToastAlert, onEnterKeyPressEventHandler } : props,
-) {
+function LoginForm({
+  setLoginLoading,
+  callToastMsg,
+  hideToastMsg,
+  clearToastTimeout,
+} : props) {
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
   const inputWrapper = useRef(null);
   const [emailValidCheck, setEmailValidCheck] = useState(false);
-  const toastTimeoutHandler = useRef(null);
-
-  const clearToastTimeoutHandler = () => {
-    if (toastTimeoutHandler.current) {
-      clearTimeout(toastTimeoutHandler.current);
-    }
-  };
-
-  const setToastAlertFalseTimer = () => {
-    toastTimeoutHandler.current = setTimeout(() => {
-      setToastAlert(false);
-    }, TOAST_ERROR_ALERT_TIME);
-  };
 
   const setLoginLoadingByEmailValidCheck = () => {
     if (isValidEmail(email)) {
@@ -50,21 +43,35 @@ function LoginForm(
     }
   };
 
-  const onLogin = useCallback(async () => {
+  const callErrorToastMsg = (errorMsg) => {
+    callToastMsg({
+      callToastMsg: errorMsg,
+      callToastColor: 'red',
+    });
+    hideToastMsg(() => {});
+  };
+
+  const onLogin = useCallback(async (errorCallbackFunc) => {
     if (isValidEmail(email)) {
       try {
         await mutate('/user/loginUser', await login({ email, password }), false);
       } catch (error) {
-        loginErrorHandler(error.response.data.error);
-        setToastAlertFalseTimer();
+        errorCallbackFunc(error.response.data.error);
+        setLoginLoading(false);
       }
     }
-  }, [email, password, mutate]);
+  }, [email, password]);
 
   const onSubmitLoginForm = async () => {
     setLoginLoadingByEmailValidCheck();
-    clearToastTimeoutHandler();
-    await onLogin();
+    clearToastTimeout();
+    await onLogin(callErrorToastMsg);
+  };
+
+  const onEnterKeyPressEventHandler = async (e) => {
+    if (e.code === 'Enter') {
+      await onSubmitLoginForm();
+    }
   };
 
   return (
@@ -95,6 +102,7 @@ function LoginForm(
           />
         </Form.Field>
       </FormFiledWrapper>
+      <button aria-label="loginButton" type="submit" hidden />
     </Form>
   );
 }

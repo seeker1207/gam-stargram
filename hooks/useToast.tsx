@@ -21,10 +21,10 @@ interface setToast {
 }
 
 export type CallToastFunc = ({ callToastColor, callToastMsg }:{callToastColor: 'red'|'green', callToastMsg: string}) => void;
-export type HideToastMsgFunc = (hideAfterCallBack:(...ars: any[]) => any) => void;
+export type HideToastFunc = (hideAfterCallBack:(...ars: any[]) => any) => void;
 export type ClearToastTimeoutFunc = () => void;
 
-type useToastResult = [CallToastFunc, HideToastMsgFunc, ClearToastTimeoutFunc, Toast, setToast]
+type useToastResult = [CallToastFunc, HideToastFunc, ClearToastTimeoutFunc, Toast, setToast]
 
 function UseToast({ initialToastAlert = false,
   initialToastMsg = '',
