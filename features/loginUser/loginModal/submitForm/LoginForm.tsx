@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useCallback, useRef, useState } from 'react';
+import React, { Dispatch, SetStateAction, useCallback, useEffect, useRef, useState } from 'react';
 import { Form } from 'semantic-ui-react';
 import { mutate } from 'swr';
 import { FormFiledWrapper } from '../LoginModal.styles';
@@ -15,6 +15,7 @@ interface props {
   callToastMsg: CallToastFunc
   hideToastMsg: HideToastFunc
   clearToastTimeout: ClearToastTimeoutFunc
+  isClickedLoginButton: boolean
 }
 
 function isValidEmail(inputText) {
@@ -28,11 +29,13 @@ function LoginForm({
   callToastMsg,
   hideToastMsg,
   clearToastTimeout,
+  isClickedLoginButton,
 } : props) {
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
   const inputWrapper = useRef(null);
   const [emailValidCheck, setEmailValidCheck] = useState(false);
+  const submitButton = useRef(null);
 
   const setLoginLoadingByEmailValidCheck = () => {
     if (isValidEmail(email)) {
@@ -74,6 +77,12 @@ function LoginForm({
     }
   };
 
+  useEffect(() => {
+    if (isClickedLoginButton) {
+      submitButton.current.click();
+    }
+  }, [isClickedLoginButton]);
+
   return (
     <Form onSubmit={onSubmitLoginForm}>
       <FormFiledWrapper ref={inputWrapper}>
@@ -102,7 +111,7 @@ function LoginForm({
           />
         </Form.Field>
       </FormFiledWrapper>
-      <button aria-label="loginButton" type="submit" hidden />
+      <button ref={submitButton} aria-label="loginButton" type="submit" hidden />
     </Form>
   );
 }

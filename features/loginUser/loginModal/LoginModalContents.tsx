@@ -1,54 +1,21 @@
-import React, { Dispatch, MouseEventHandler, SetStateAction, useCallback, useState } from 'react';
-import { Form, Menu, Modal, Segment } from 'semantic-ui-react';
-import { mutate } from 'swr';
-import { FormFiledWrapper, ToastMsg } from './LoginModal.styles';
+import React, { Dispatch, MouseEvent, SetStateAction } from 'react';
+import { Menu, MenuItemProps, Modal, Segment } from 'semantic-ui-react';
+import { ToastMsg } from './LoginModal.styles';
 import SignUpForm from './submitForm/SignUpForm';
-import { login, signUp } from '../../../api/userApi';
 import LoginForm from './submitForm/LoginForm';
+import useToast from '../../../hooks/useToast';
 
 interface Props{
   activeItem: string;
-  onClickModalMenuHandler: MouseEventHandler;
+  onClickModalMenuHandler: (event: MouseEvent, data: MenuItemProps) => void
   setLoginLoading: Dispatch<SetStateAction<boolean>>
+  isClickedLoginButton: boolean
+  isClickSignUpButton: boolean
 }
 
-function LoginModalContents({ activeItem, onClickModalMenuHandler, setLoginLoading } : Props) {
-  const [toastAlert, setToastAlert] = useState(false);
-  const [toastMsg, setToastMsg] = useState('');
-  const [toastColor, setToastColor] : [toastColor: 'red' | 'green', setToastColor: any] = useState('red');
-
-  const loginErrorHandler = (errorMsg) => {
-    setToastColor('red');
-    setToastMsg(errorMsg);
-    setLoginLoading(false);
-    setToastAlert(true);
-  };
-
-  const onSignUp = useCallback(async () => {
-    try {
-      setLoginLoading(true);
-      await signUp({ email, password });
-      setToastColor('green');
-      setToastMsg('회원가입 완료! 자동으로 로그인됩니다.');
-      setToastAlert(true);
-      setTimeout(async () => {
-        setToastAlert(false);
-        await mutate(
-          '/user/loginUser',
-          await login({ email, password }),
-          false,
-        );
-      }, 3500);
-    } catch (error) {
-      setToastMsg(error.response.data.error);
-    }
-  }, [email, password]);
-
-  const onEnterKeyPressEventHandler = useCallback(async (e) => {
-    if (e.code === 'Enter') {
-      await onLogin();
-    }
-  }, [onLogin]);
+function LoginModalContents({ activeItem, onClickModalMenuHandler, setLoginLoading, isClickedLoginButton, isClickSignUpButton } : Props) {
+  const [callToastMsg, hideToastMsg, clearToastTimeout, toastInfo] = useToast({});
+  const { toastAlert, toastColor, toastMsg } = toastInfo;
 
   return (
     <Modal.Content>
@@ -74,16 +41,25 @@ function LoginModalContents({ activeItem, onClickModalMenuHandler, setLoginLoadi
             회원가입
           </Menu.Item>
         </Menu>
-        {activeItem === 'login' ?
-          <LoginForm
-            loginErrorHandler={loginErrorHandler}
-            setLoginLoading={setLoginLoading}
-            setToastAlert={setToastAlert}
-            onEnterKeyPressEventHandler={onEnterKeyPressEventHandler} />
-          : <SignUpForm setSignUpInfo={} />
-        }
-        <button ref={submitHiddenButton} type="submit" hidden />
-        </Form>
+        {activeItem === 'login'
+          ? (
+            <LoginForm
+              setLoginLoading={setLoginLoading}
+              callToastMsg={callToastMsg}
+              hideToastMsg={hideToastMsg}
+              clearToastTimeout={clearToastTimeout}
+              isClickedLoginButton={isClickedLoginButton}
+            />
+          )
+          : (
+            <SignUpForm
+              setLoginLoading={setLoginLoading}
+              callToastMsg={callToastMsg}
+              hideToastMsg={hideToastMsg}
+              clearToastTimeout={clearToastTimeout}
+              isClickedSignUpButton={isClickSignUpButton}
+            />
+          )}
       </Modal.Description>
     </Modal.Content>
   );

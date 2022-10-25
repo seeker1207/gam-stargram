@@ -1,5 +1,5 @@
 import React, {
-  Dispatch, SetStateAction, useCallback,
+  Dispatch, SetStateAction, useCallback, useEffect, useRef,
 } from 'react';
 import { Form } from 'semantic-ui-react';
 import { mutate } from 'swr';
@@ -13,14 +13,16 @@ interface prop {
   callToastMsg: CallToastFunc
   hideToastMsg: HideToastFunc
   clearToastTimeout: ClearToastTimeoutFunc
+  isClickedSignUpButton: boolean
 }
-function SignUpForm({ setLoginLoading, callToastMsg, hideToastMsg, clearToastTimeout } : prop) {
+function SignUpForm({ setLoginLoading, callToastMsg, hideToastMsg, clearToastTimeout, isClickedSignUpButton } : prop) {
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
   const [nickname, onChangeNickname] = useInput('');
   const [birthdayDay, onChangeBirthdayDay] = useInput('');
   const [birthdayMonth, onChangeBirthdayMonth] = useInput('1');
   const [birthdayYear, onChangeBirthdayYear] = useInput('');
+  const submitButton = useRef(null);
 
   const onSignUp = useCallback(async () => {
     try {
@@ -52,6 +54,11 @@ function SignUpForm({ setLoginLoading, callToastMsg, hideToastMsg, clearToastTim
       await onSubmitSignUpForm();
     }
   };
+
+  useEffect(() => {
+    submitButton.current.click();
+  }, [isClickedSignUpButton]);
+
   return (
     <Form onSubmit={onSubmitSignUpForm}>
       <FormFiledWrapper>
@@ -68,7 +75,7 @@ function SignUpForm({ setLoginLoading, callToastMsg, hideToastMsg, clearToastTim
           <Form.Input required fluid placeholder="일" onChange={onChangeBirthdayDay} value={birthdayDay} />
         </Form.Group>
       </FormFiledWrapper>
-      <button aria-label="signup-button" type="submit" hidden />
+      <button ref={submitButton} aria-label="signup-button" type="submit" hidden />
     </Form>
   );
 }
