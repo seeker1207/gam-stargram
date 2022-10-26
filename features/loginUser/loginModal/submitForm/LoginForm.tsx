@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction, useCallback, useEffect, useRef, useState } from 'react';
 import { Form } from 'semantic-ui-react';
-import { mutate } from 'swr';
+import { useSWRConfig } from 'swr';
 import { FormFiledWrapper } from '../LoginModal.styles';
 import { login } from '../../../../api/userApi';
 import useInput from '../../../../hooks/useInput';
@@ -34,14 +34,15 @@ function LoginForm({
   const [email, onChangeEmail] = useInput('');
   const [password, onChangePassword] = useInput('');
   const inputWrapper = useRef(null);
-  const [emailValidCheck, setEmailValidCheck] = useState(false);
+  const [emailValidCheck, setEmailValidCheck] = useState(true);
   const submitButton = useRef(null);
+  const { mutate } = useSWRConfig();
 
   const setLoginLoadingByEmailValidCheck = () => {
     if (isValidEmail(email)) {
       setLoginLoading(true);
     } else {
-      setEmailValidCheck(true);
+      setEmailValidCheck(false);
       setLoginLoading(false);
     }
   };
@@ -57,7 +58,7 @@ function LoginForm({
   const onLogin = useCallback(async (errorCallbackFunc) => {
     if (isValidEmail(email)) {
       try {
-        await mutate('/user/loginUser', await login({ email, password }), false);
+        await mutate('/user/login', await login({ email, password }), false);
       } catch (error) {
         errorCallbackFunc(error.response.data.error);
         setLoginLoading(false);

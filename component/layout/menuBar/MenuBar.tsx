@@ -19,7 +19,7 @@ function MenuBar({ isLoggedOut } : { isLoggedOut: boolean }) {
         </Menu.Item>
         <LogoWrapper>
           <Menu.Item>
-            <Link href="/pages" passHref>
+            <Link href="/" passHref>
               <Image src="/gamstar_logo.PNG" size="small" />
             </Link>
           </Menu.Item>

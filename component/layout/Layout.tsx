@@ -7,7 +7,7 @@ import SideBar from './sideBar/SideBar';
 
 export default function Layout({ children } : {children : ReactElement}) {
   const { isLoggedOut } = useLoginUser();
-
+  console.log(isLoggedOut);
   return (
     <LayoutWrapper>
       <MenuGridWrapper>

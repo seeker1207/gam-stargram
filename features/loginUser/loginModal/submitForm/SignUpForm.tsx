@@ -33,7 +33,7 @@ function SignUpForm({ setLoginLoading, callToastMsg, hideToastMsg, clearToastTim
       });
       hideToastMsg(async () => {
         const userInfo = await login({ email, password });
-        await mutate('/user/loginUser', userInfo, false);
+        await mutate('/user', userInfo, false);
       });
     } catch (error) {
       callToastMsg({

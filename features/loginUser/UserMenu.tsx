@@ -11,7 +11,7 @@ function UserMenu() {
 
   const onLogoutButtonClick = useCallback(async () => {
     await logout();
-    await mutate('/user/loginUser');
+    await mutate('/user/login');
   }, []);
 
   return (
