@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="feat: login feature 리팩토링&#10;LoginForm.tsx 함수 분리 작업 및 LoginModalContents.tsx 부분 수정">
+    <list default="true" id="cdc4e111-6c10-453e-99a4-d35a77e6a500" name="Changes" comment="feat: login feature 리팩토링&#10;로그인,로그아웃 시 SWR의 mutate key 수정">
+      <change afterPath="$PROJECT_DIR$/../gam-stargram-back/uploads/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/mypage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gam-stargram-back/service/PostService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../gam-stargram-back/service/PostService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/component/layout/menuBar/MenuBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/component/layout/menuBar/MenuBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/loginUser/UserMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/loginUser/UserMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/loginUser/loginModal/submitForm/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/loginUser/loginModal/submitForm/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/loginUser/loginModal/submitForm/SignUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/loginUser/loginModal/submitForm/SignUpForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/useUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/useUser.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,21 +38,29 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "javascript.nodejs.core.library.configured.version": "16.14.2",
-    "javascript.nodejs.core.library.typings.version": "16.11.36",
+    "javascript.nodejs.core.library.typings.version": "16.18.23",
     "js.last.introduce.type": "CONST",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/React portfolio/gam-stargram",
+    "last_opened_file_path": "C:/React portfolio/gam-stargram-back/uploads",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "C:\\React portfolio\\gam-stargram-back\\.yarn\\unplugged\\eslint-npm-8.16.0-4dc6ea62e6\\node_modules\\eslint",
     "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.sourceCode.TypeScript",
+    "settings.editor.selected.configurable": "editing.templates",
     "ts.external.directory.path": "yarn:..\\gam-stargram-back\\package.json:typescript",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\React portfolio\gam-stargram-back\uploads" />
+      <recent name="C:\React portfolio\gam-stargram-back" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.dev">
     <configuration name="이름이 지정되지 않았습니다" type="NodeJSConfigurationType" nameIsGenerated="true" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -136,7 +143,11 @@
       <workItem from="1662712141169" duration="595000" />
       <workItem from="1663032306363" duration="10548000" />
       <workItem from="1666751043072" duration="1991000" />
-      <workItem from="1666772695820" duration="664000" />
+      <workItem from="1666772695820" duration="1295000" />
+      <workItem from="1667370051976" duration="621000" />
+      <workItem from="1668916361963" duration="617000" />
+      <workItem from="1669446985024" duration="140000" />
+      <workItem from="1681212381645" duration="3025000" />
     </task>
     <task id="LOCAL-00001" summary="앤트디자인 모듈 삭제 및 uuid를 이용한 리스트 키 설정">
       <created>1653036824027</created>
@@ -236,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666619525045</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="feat: login feature 리팩토링&#10;로그인,로그아웃 시 SWR의 mutate key 수정">
+      <created>1666773990971</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1666773990971</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +292,8 @@
     <MESSAGE value="이미지 next/image 태그로 변경" />
     <MESSAGE value="게임 이미지 dimmer 효과 추가" />
     <MESSAGE value="feat: login feature 리팩토링&#10;LoginForm.tsx 함수 분리 작업 및 LoginModalContents.tsx 부분 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: login feature 리팩토링&#10;LoginForm.tsx 함수 분리 작업 및 LoginModalContents.tsx 부분 수정" />
+    <MESSAGE value="feat: login feature 리팩토링&#10;로그인,로그아웃 시 SWR의 mutate key 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: login feature 리팩토링&#10;로그인,로그아웃 시 SWR의 mutate key 수정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
